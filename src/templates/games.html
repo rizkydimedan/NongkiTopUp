@@ -164,81 +164,78 @@
             <!-- Left Side -->
             <div class="h-screen z-40 w-1/5 bg-transparent backdrop-brightness-150 brightness-150 shadow-2xl rounded-3xl ml-8 hidden md:block sticky top-24 ...">
                 <!-- List Kategori -->
-                <div class=" ml-3 flex flex-col ">
-                    <div class="text-white font-medium mt-8 ml-7 ">
-                        <h2 class=" font-semibold mb-4 text-2xl">Kategori</h2>
-                        <ul class="gap-4 text-xl">
-                            <!-- List Kategori -->
-                            <li class="mb-2">
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
-                                    <span class="text-sm">Action</span>
-                                </label>
-                            </li>
-                            <li class="mb-2">
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
-                                    <span class="text-sm">Adventure</span>
-                                </label>
-                            </li>
-                            <li class="mb-2">
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
-                                    <span class="text-sm">MMO</span>
-                                </label>
-                            </li>
-                            <li class="mb-2">
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
-                                    <span class="text-sm">Strategy</span>
-                                </label>
-                            </li>
-                            <li class="mb-2">
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
-                                    <span class="text-sm">Simulator</span>
-                                </label>
-                            </li>
-                            <li class="mb-2">
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
-                                    <span class="text-sm">Sport</span>
-                                </label>
-                            </li>
-                            <!-- List Kategori -->
-                        </ul>
-
-                        <h2 class="font-semibold mt-8 mb-4 text-2xl">Platform</h2>
-                        <ul class="gap-4 text-xl">
-                            <!-- List Kategori -->
-                            <li class="mb-2">
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="form-checkbox  bg-transparent rounded-sm  mr-2">
-                                    <span class="text-sm">PC</span>
-                                </label>
-                            </li>
-                            <li class="mb-2">
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
-                                    <span class="text-sm">Playstation</span>
-                                </label>
-                            </li>
-                            <li class="mb-2">
-                                <label class="flex items-center">
-                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
-                                    <span class="text-sm">Mobile</span>
-                                </label>
-                            </li>
-                            <!-- List Kategori -->
-                        </ul>
+                <form id="filterForm">
+                    <div class="ml-3 flex flex-col">
+                        <div class="text-white font-medium mt-8 ml-7">
+                            <h2 class="font-semibold mb-4 text-2xl">Kategori</h2>
+                            <ul class="gap-4 text-xl">
+                                <!-- List Kategori -->
+                                <li class="mb-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="category" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                        <span class="text-sm">Action</span>
+                                    </label>
+                                </li>
+                                <li class="mb-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="category" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                        <span class="text-sm">Adventure</span>
+                                    </label>
+                                </li>
+                                <li class="mb-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="category" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                        <span class="text-sm">MMO</span>
+                                    </label>
+                                </li>
+                                <li class="mb-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="category" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                        <span class="text-sm">Simulasi</span>
+                                    </label>
+                                </li>
+                                <li class="mb-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="category" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                        <span class="text-sm">Strategy</span>
+                                    </label>
+                                </li>
+                                
+                                <!-- List Kategori -->
+                            </ul>
+                            <!-- Platform -->
+                            <h2 class="font-semibold mt-8 mb-4 text-2xl">Platform</h2>
+                            <ul class="gap-4 text-xl">
+                                <!-- List Platform -->
+                                <li class="mb-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="platform" class="form-checkbox  bg-transparent rounded-sm  mr-2">
+                                        <span class="text-sm">PC</span>
+                                    </label>
+                                </li>
+                                <li class="mb-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="platform" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                        <span class="text-sm">Playstation</span>
+                                    </label>
+                                </li>
+                                <li class="mb-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" name="platform" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                        <span class="text-sm">Mobile</span>
+                                    </label>
+                                </li>
+                                <!-- List Platform -->
+                            </ul>
+                        </div>
+                        <!-- button -->
+                        <button type="button" onclick="applyFilter()"
+                            class="bg-yellow-600 hover:bg-orange-800 text-white px-7 md:px-10 py-1 rounded-full mx-auto mt-8 text-sm md:text-lg">Apply
+                            Filter</button>
                     </div>
-                    <!-- button -->
-                    <button type="button"
-                        class="bg-yellow-600 hover:bg-orange-800 text-white px-7 md:px-10 py-1 rounded-full mx-auto mt-8 tex-sm md:text-xl">Apply
-                        Filter</button>
-
-                </div>
+                </form>
                 <!-- List Kategori -->
+                
                 <div class="flex items-center justify-between">
                     <div class="flex  space-x-6 justify-center mx-auto mb-3 mt-20">
                         <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
