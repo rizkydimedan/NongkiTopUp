@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../public/css/output.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Swiper css -->
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" /> -->
+
+
+
+</head>
+
+<body class="bg-yellow-700 bg-gradient-to-r from-slate-950 ...">
+    <!-- Start Header -->
+    <header class=" pt-2 top-0 fixed z-40 w-full shadow-lg items-center ">
+        <div class="container mx-auto md:relative md:flex-row gap-y-4 md:gap-y-0">
+            <div class="flex h-[60px] justify-between">
+                <!-- Start Hamburger Menu -->
+                <div class="w-auto block md:hidden ">
+                    <div class="w-10 h-10 items-center flex justify-center rounded-md">
+                        <button id="hamburger" type="button" class="font-medium md:text-2xl text-lg ">
+                            <i class="fa-solid fa-bars rounded-md "></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- End Hamburger Menu -->
+                <!-- logo -->
+                <div class="flex justify-center md:justify-normal items-center">
+                    <a href="#" class="font-semibold text-md md:text-xl lg:text-2xl"><img
+                            src="../images/logo/logo aov.png" alt="" srcset="" class="w-24 object-cover"></a>
+                </div>
+                <!-- End Logo -->
+
+                <!-- Navbar Menu -->
+                <div class="flex items-center md:flex-row md:gap-x-10 md:gap-y-0">
+                    <!-- List Menu dislpay MD -->
+                    <div class="mx-3 hidden md:block md:self-stretch">
+                        <ul id="menu" class="flex md:flex-row justify-center items-center h-full text-white">
+                            <li class="mx-3 h-full">
+                                <a href="index.html"
+                                    class="h-full relative z-10 -mb-px flex items-center border-b-4 border-spacing-y-6 font-medium transition-colors duration-300 ease-out border-transparent hover:border-collapse hover:border-white hover:text-white gap-x-2 "><i
+                                        class="fa-solid fa-house "></i>Beranda</a>
+                            </li>
+                            <li class="mx-3 h-full">
+                                <a href="games.html"
+                                    class="h-full relative z-10 -mb-px flex items-center border-b-4 border-spacing-y-6 font-medium transition-colors duration-300 ease-out border-transparent hover:border-collapse hover:border-white hover:text-white gap-x-2 "><i
+                                        class="fa-solid fa-gamepad "></i>Games</a>
+                            </li>
+                            <li class="mx-3 h-full">
+                                <a href="#_"
+                                    class="h-full relative z-10 -mb-px flex items-center border-b-4 border-spacing-y-6 font-medium transition-colors duration-300 ease-out border-transparent hover:border-collapse hover:border-white hover:text-white gap-x-2"><i
+                                        class="fa-solid fa-money-bill"></i>Transaksi</a>
+                            </li>
+                            <li class="mx-3 h-full">
+                                <a href="#_"
+                                    class="h-full relative z-10 -mb-px flex items-center border-b-4 border-spacing-y-6 font-medium transition-colors duration-300 ease-out border-transparent hover:border-collapse hover:border-white hover:text-white gap-x-2"><i
+                                        class="fa-regular fa-newspaper"></i>Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hidden xl:block xl:w-auto xl:ml-7"></div>
+
+                    <!-- Mobile Nav -->
+                    <nav
+                        class="mnav bg-white fixed w-[300px] top-0 h-screen -left-[300px] shadow-2xl md:hidden transition-all duration-300 z-20">
+                        <div
+                            class="btnNav w-8 h-8 relative -right-64 top-6 flex justify-center cursor-pointer transition-all">
+                            <button id="btnNavIcon" type="button" class="text-3xl ">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                        <!-- Logo, List -->
+                        <div class="px-12 flex flex-col gap-y-2 h-full">
+                            <!-- logo -->
+
+                            <a href="#" class="self-start font-medium pl-2 top-0 "><img
+                                    src="../images/logo/logo aov.png" alt="" srcset="" class="w-24 object-cover 0"></a>
+
+                            <!-- List -->
+                            <ul>
+                                <li class="w-auto rounded-lg flex my-2">
+                                    <a href="index.html"
+                                        class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
+                                            class="fa-solid fa-house pl-2"></i><span class="pl-2">Beranda</span></a>
+                                </li>
+                                <li class="w-auto rounded-lg flex my-2">
+                                    <a href="games.html"
+                                        class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
+                                            class="fa-solid fa-gamepad pl-2"></i><span class="pl-2">Games</span></a>
+                                </li>
+                                <li class="w-auto rounded-lg flex my-2">
+                                    <a href="#"
+                                        class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
+                                            class="fa-solid fa-money-bill pl-2"></i><span
+                                            class="pl-2">Transaksi</span></a>
+                                </li>
+                                <li class="w-auto rounded-lg flex my-2">
+                                    <a href="#"
+                                        class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
+                                            class="fa-regular fa-newspaper pl-2"></i><span class="pl-2">Blog</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- End Mobile Nav-->
+                </div>
+                <!-- End Navbar Menu -->
+
+                <!-- Start Search, Login -->
+                <div class=" h-full items-center flex gap-x-1 md:gap-x-2  gap-y-4 md:flex-row md:gap-y-0 text-white">
+                    <!-- Search -->
+                    <div
+                        class="transition-colors duration-300 ease-out hover:text-white hover:bg-slate-600  w-10 h-10 items-center flex justify-center rounded-md focus:text-white focus:bg-slate-600">
+                        <button id="search" type="button" class="font-medium md:text-2xl text-lg "><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                        <!-- Search Form -->
+                        <!-- <form action=""
+                        class="absolute -bottom-20 flex items-center self-end bg-slate-300 rounded-xl w-[370px] h-[50px]">
+                        <label for="nav-search" class="mx-5">
+                            <i class="fa-solid fa-magnifying-glass mr-2"></i>
+                        </label>
+                        <input type="text" id="nav-search" placeholder="Search..."
+                            class="outline-none w-[300px] h-[40px] placeholder:italic bg-transparent border-l-2 border-slate-500">
+                    </form> -->
+                    </div>
+
+                    <!--  Cart  -->
+                    <div class=" ">
+                        <a href="#" id="cart"
+                            class="font-medium text-lg md:text-2xl hover:text-white hover:bg-slate-600 mr-2 w-10 h-10 items-center flex justify-center rounded-md focus:text-white focus:bg-slate-600"><i
+                                class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    <!-- User -->
+                    <a href="login.html"
+                        class="font-semibold transition-colors duration-300 ease-out hover:text-white hidden md:block text-md md:text-xl">Login</a>
+                    <div class=" block md:hidden ">
+                        <button id="menu-user" type="button"
+                            class="font-medium text-lg md:text-xl hover:text-white hover:bg-slate-600 ml-2 w-10 h-10 items-center flex justify-center rounded-md focus:text-white focus:bg-slate-600"><i
+                                class="fa-solid fa-user"></i></button>
+                    </div>
+                    <a href="signUp.html"
+                        class="px-4 py-2 text-xs md:text-md font-bold text-white uppercase transition-all duration-150 bg-cyan-700 rounded shadow outline-none active:bg-emerald-600 hover:shadow-md focus:outline-none ease hidden md:block">
+                        Sign Up
+                    </a>
+                </div>
+
+                <!-- End Search, Login -->
+            </div>
+        </div>
+    </header>
+    <!-- END Header -->
+
+    <!-- Start Section Hero -->
+    <section class="w-auto pt-24">
+        <div class="flex md:gap-8 mx-auto relative ">
+            <!-- Left Side -->
+            <div class="h-screen w-1/5 bg-transparent backdrop-brightness-150 brightness-150 shadow-2xl rounded-3xl ml-8 hidden md:block">
+                <!-- List Kategori -->
+                <div class=" ml-3 flex flex-col ">
+                    <div class="text-white font-medium mt-8 ml-7 ">
+                        <h2 class=" font-semibold mb-4 text-2xl">Kategori</h2>
+                        <ul class="gap-4 text-xl">
+                            <!-- List Kategori -->
+                            <li class="mb-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                    <span class="text-sm">Action</span>
+                                </label>
+                            </li>
+                            <li class="mb-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                    <span class="text-sm">Adventure</span>
+                                </label>
+                            </li>
+                            <li class="mb-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                    <span class="text-sm">MMO</span>
+                                </label>
+                            </li>
+                            <li class="mb-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                    <span class="text-sm">Strategy</span>
+                                </label>
+                            </li>
+                            <li class="mb-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                    <span class="text-sm">Simulator</span>
+                                </label>
+                            </li>
+                            <li class="mb-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                    <span class="text-sm">Sport</span>
+                                </label>
+                            </li>
+                            <!-- List Kategori -->
+                        </ul>
+
+                        <h2 class="font-semibold mt-8 mb-4 text-2xl">Platform</h2>
+                        <ul class="gap-4 text-xl">
+                            <!-- List Kategori -->
+                            <li class="mb-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox  bg-transparent rounded-sm  mr-2">
+                                    <span class="text-sm">PC</span>
+                                </label>
+                            </li>
+                            <li class="mb-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                    <span class="text-sm">Playstation</span>
+                                </label>
+                            </li>
+                            <li class="mb-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox bg-transparent rounded-sm mr-2">
+                                    <span class="text-sm">Mobile</span>
+                                </label>
+                            </li>
+                            <!-- List Kategori -->
+                        </ul>
+                    </div>
+                    <!-- button -->
+                    <button type="button"
+                        class="bg-yellow-600 hover:bg-orange-800 text-white px-7 md:px-10 py-1 rounded-full mx-auto mt-8 tex-sm md:text-xl">Apply
+                        Filter</button>
+
+                </div>
+                <!-- List Kategori -->
+                <div class="flex items-center justify-between">
+                    <div class="flex  space-x-6 justify-center mx-auto mb-3 mt-20">
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
+                                class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
+                                class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"><i
+                                class="fa-solid fa-phone"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Left -->
+
+            <!-- Right Side -->
+            <div class="h-auto w-4/5 mx-auto md:mr-3">
+                <div class="w-full h-[200px] md:h-[400px] flex">
+                    <!-- Carousel -->
+                    <div class="swiper mySwiper w-full h-full rounded-3xl">
+                        <div class="swiper-wrapper">
+                            <!-- Card Carousel 1 -->
+                            <div class="swiper-slide">
+                                <div
+                                    class="card flex-row bg-clip-border bg-transparent text-white shadow-md relative w-full h-full items-end overflow-hidden rounded-3xl">
+                                    <img src="../images/content/car-1.png" alt="bg"
+                                        class="absolute inset-0 h-full w-full object-cover object-center" />
+                                    <div class="absolute inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                                    <div class="relative flex flex-col pl-5 my-7 md:my-14">
+                                        <h4
+                                            class="block antialiased tracking-normal font-sans text-lg font-semibold leading-snug  md:text-2xl">
+                                            Nongki Top Up</h4>
+                                        <p class="block antialiased text-lg font-medium md:text-xl">Dapatkan 10% Promo
+                                            <br />with
+                                            code: Glory10</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card Carousel 2 -->
+                            <div class="swiper-slide">
+                                <div
+                                    class="card flex-row bg-clip-border bg-transparent text-white shadow-md relative w-full h-full items-end overflow-hidden rounded-3xl">
+                                    <img src="../images/content/car-3.png" alt="bg"
+                                        class="absolute inset-0 h-full w-full object-cover object-center" />
+                                    <div class="absolute inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                                    <div class="relative flex flex-col justify-end pl-5 my-7 md:my-14">
+                                        <h4
+                                            class="block antialiased tracking-normal text-lg font-semibold leading-snug md:text-2xl">
+                                            Ultimate $50K Winter Clash</h4>
+                                        <p class="text-lg font-medium md:text-xl">Join yhe frosty fray and <br
+                                                class="" />
+                                            come out on top</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- Swiper pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <!-- End Carousel -->
+
+                <!-- Game Menu -->
+                <div class="grid text-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 justify-between pt-24">
+                    <!-- Start Card 1 -->
+                    <a href="#" tabindex="0">
+                        <div
+                            class="w-[100] md:w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 md:rounded-2x h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
+                            <div class="w-full h-[100] md:h-[200px]">
+                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
+                            </div>
+                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                                <h4
+                                    class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
+                                    Valorant</h4>
+                                <p class="text-xxs md:text-sm">Riot Games</p>
+                            </div>
+                           
+                        </div>
+                    </a>
+                    <!-- End Card 1 -->
+                      <!-- Start Card 1 -->
+                      <a href="#" tabindex="0">
+                        <div
+                            class="w-[100] md:w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 gap-3 md:rounded-2x border-2 hover:border-none hover:border-0 h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
+                            <div class="w-full h-[100] md:h-[200px]">
+                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
+                            </div>
+                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                                <h4
+                                    class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
+                                    Valorant</h4>
+                                <p class="text-xxs md:text-sm">Riot Games</p>
+                            </div>
+                           
+                        </div>
+                    </a>
+                    <!-- End Card 1 -->
+                      <!-- Start Card 1 -->
+                      <a href="#" tabindex="0">
+                        <div
+                            class="w-[100] md:w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 gap-3 md:rounded-2x border-2 hover:border-none hover:border-0 h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
+                            <div class="w-full h-[100] md:h-[200px]">
+                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
+                            </div>
+                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                                <h4
+                                    class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
+                                    Valorant</h4>
+                                <p class="text-xxs md:text-sm">Riot Games</p>
+                            </div>
+                           
+                        </div>
+                    </a>
+                    <!-- End Card 1 -->
+                      <!-- Start Card 1 -->
+                      <a href="#" tabindex="0">
+                        <div
+                            class="w-[100] md:w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 gap-3 md:rounded-2x border-2 hover:border-none hover:border-0 h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
+                            <div class="w-full h-[100] md:h-[200px]">
+                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
+                            </div>
+                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                                <h4
+                                    class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
+                                    Valorant</h4>
+                                <p class="text-xxs md:text-sm">Riot Games</p>
+                            </div>
+                           
+                        </div>
+                    </a>
+                    <!-- End Card 1 -->
+                
+                </div>
+                <!-- Game Menu -->
+            </div>
+        </div>
+    </section>
+
+    <!-- End Section Hero -->
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="p-4  sm:p-6 mt-20">
+        <div class="mx-auto max-w-screen-xl">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="flex items-center">
+                        <img src="../images/logo/logo aov.png" class="mr-3 h-8" alt="FlowBite Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Nongi
+                            TopUp</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+                        <ul class="text-gray-600 dark:text-gray-400">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Tailwin CSS</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Tailwind CSS</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+                        <ul class="text-gray-600 dark:text-gray-400">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline ">Instagram</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Facebook</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                        <ul class="text-gray-600 dark:text-gray-400">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#"
+                        class="hover:underline">NongkiTopUp</a>. All Rights Reserved.
+                </span>
+                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
+                            class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
+                            class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"><i
+                            class="fa-solid fa-phone"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+
+
+
+
+
+
+
+
+    <div class="mb-96"></div>
+
+    <!-- Material tailwind -->
+    <!-- <script src="node_modules/@material-tailwind/html@latest/scripts/ripple.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script> -->
+    <script src="/node_modules/flowbite/dist/flowbite.min.js"></script>
+
+
+    <script src="../assets/fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/js/all.js"></script>
+    <!-- Swiper Js -->
+
+    <script src="../js/swiper-bundle.min.js"></script>
+    <!-- Scroll Reveale -->
+    <script src="../js/scrollreveal.min.js"></script>
+    <!-- main js -->
+    <script src="../js/script.js"></script>
+    <!--  -->
+    <script src="../js/carouselSwiper.js"></script>
+    <script src="../js/accordion.js"></script>
+
+</body>
+
+</html>
