@@ -164,7 +164,7 @@
             <!-- Start Text & Img -->
             <div class="flex flex-col md:flex-row items-center justify-between h-full z-10">
                 <!-- Text -->
-                <div class="hero-text md:w-[48%] text-center md:text-left ">
+                <div class="hero-text md:w-[48%] text-center md:text-left md:justify-start">
                     <!-- Badge -->
                     <div
                         class="flex items-center py-[10px] px-3 w-max mb-[26px] mx-auto md:mx-0 bg-white rounded-full ">
@@ -175,9 +175,11 @@
                     <!-- desc -->
                     <p class="mb-[42px] md:max-w-xl">A Place Top Up Game
                         fast, safe, reliable, legal</p>
-                    <button type="button"
-                        class="btn btn-lg bg-sky-500 gap-x-3 mx-auto md:mx-0 text-white hover:bg-sky-700"></i>Explore
-                        Now <i class="fa-solid fa-arrow-right"></i></button>
+                     
+                    <a href="#explore-now"
+                        class="btn btn-sm bg-sky-500 gap-x-3 mx-auto md:mx-0 w-72 text-white hover:bg-sky-700 left-0"></i>Explore
+                        Now <i class="fa-solid fa-arrow-right"></i></a>
+                 
                 </div>
                 <!-- Image -->
                 <div class="hero-img hidden md:flex max-w-[814px] self-end">
@@ -324,10 +326,10 @@
     <!-- End Clients -->
 
     <!-- Section Rekomendasi Game -->
-    <section class="w-full pt-20 ">
+    <section class="w-full pt-10 md:pt-20 " id="explore-now">
         <div class="container mx-auto">
             <div class="flex justify-start py-4 text-white">
-                <h2 class="text-lg md:text-3xl font-semibold mb-5 drop-shadow-md"><i
+                <h2 class="h2 text-xl md:text-3xl font-semibold mb-5 drop-shadow-md"><i
                         class="fa-solid fa-heart mr-3"></i>Rekomendasi</h2>
             </div>
             <!-- Card Games -->
@@ -600,12 +602,6 @@
 
   
       
-  
-
-
-
-
-    <div class="mb-96"></div>
 
     <!-- Material tailwind -->
     <!-- <script src="node_modules/@material-tailwind/html@latest/scripts/ripple.js"></script> -->
@@ -624,6 +620,7 @@
     <!--  -->
    <script src="../js/carouselSwiper.js"></script>
    <script src="../js/accordion.js"></script>
+   <script src="../js/anchorLink.js"></script>
 
    </body>
 </html>

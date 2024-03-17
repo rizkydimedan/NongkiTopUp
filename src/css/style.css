@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-    @apply text-slate-600 font-primary text-[17px] leading-8;
+    @apply text-slate-700 font-primary text-[17px] leading-8;
   
 }
 
