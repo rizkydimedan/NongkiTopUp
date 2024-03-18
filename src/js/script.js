@@ -12,19 +12,18 @@ window.onscroll = function () {
 
 
 // Mobile Nav
+const bgOffcanvas = document.querySelector('.background-offcanvas');
 const mobileNav = document.querySelector('.mnav');
 const openBtn = document.querySelector('#hamburger');
 const closeBtn = document.querySelector('.btnNav');
 const btnNavIcon = document.querySelector('#btnNavIcon');
-
 const navOpenClass = 'left-0';
-const navCloseClass = '-left-[300px]';
 
+const bgOff = 'hidden';
 function toggleNav() {
     mobileNav.classList.toggle(navOpenClass);
-    btnNavIcon.classList.add('hamburger-active');
+    bgOffcanvas.classList.toggle(bgOff);
 }
-
 openBtn.addEventListener('click', toggleNav);
 closeBtn.addEventListener('click', toggleNav);
 

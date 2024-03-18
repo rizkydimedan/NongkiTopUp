@@ -41,6 +41,7 @@
 
                 <!-- Navbar Menu -->
                 <div class="flex items-center md:flex-row md:gap-x-10 md:gap-y-0">
+
                     <!-- List Menu dislpay MD -->
                     <div class="mx-3 hidden md:block md:self-stretch">
                         <ul id="menu" class="flex md:flex-row justify-center items-center h-full text-white">
@@ -68,49 +69,7 @@
                     </div>
                     <div class="hidden xl:block xl:w-auto xl:ml-7"></div>
 
-                    <!-- Mobile Nav -->
-                    <nav
-                        class="mnav bg-white fixed w-[300px] top-0 h-screen -left-[300px] shadow-2xl md:hidden transition-all duration-300 z-20">
-                        <div
-                            class="btnNav w-8 h-8 relative -right-64 top-6 flex justify-center cursor-pointer transition-all">
-                            <button id="btnNavIcon" type="button" class="text-3xl ">
-                                <i class="fa-solid fa-xmark"></i>
-                            </button>
-                        </div>
-                        <!-- Logo, List -->
-                        <div class="px-12 flex flex-col gap-y-2 h-full">
-                            <!-- logo -->
-
-                            <a href="#" class="self-start font-medium pl-2 top-0 "><img
-                                    src="../images/logo/logo aov.png" alt="" srcset="" class="w-24 object-cover 0"></a>
-
-                            <!-- List -->
-                            <ul>
-                                <li class="w-auto rounded-lg flex my-2">
-                                    <a href="index.html"
-                                        class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
-                                            class="fa-solid fa-house pl-2"></i><span class="pl-2">Beranda</span></a>
-                                </li>
-                                <li class="w-auto rounded-lg flex my-2">
-                                    <a href="games.html"
-                                        class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
-                                            class="fa-solid fa-gamepad pl-2"></i><span class="pl-2">Games</span></a>
-                                </li>
-                                <li class="w-auto rounded-lg flex my-2">
-                                    <a href="#"
-                                        class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
-                                            class="fa-solid fa-money-bill pl-2"></i><span
-                                            class="pl-2">Transaksi</span></a>
-                                </li>
-                                <li class="w-auto rounded-lg flex my-2">
-                                    <a href="#"
-                                        class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
-                                            class="fa-regular fa-newspaper pl-2"></i><span class="pl-2">Blog</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <!-- End Mobile Nav-->
+                 
                 </div>
                 <!-- End Navbar Menu -->
 
@@ -157,6 +116,57 @@
         </div>
     </header>
     <!-- END Header -->
+
+      <!-- Mobile Nav -->
+     <!-- bg offcanvas -->
+     <div class="bg-black hidden fixed  w-screen h-screen bg-opacity-85 md:hidden transition-all duration-500 ease-in-out z-40 background-offcanvas"></div>
+     <!-- bg offcanvas -->
+     <nav
+     class="mnav bg-white fixed w-[300px]  h-screen -left-[300px] shadow-2xl md:hidden transition-all duration-300 ease-in-out z-50">
+     
+
+     <div
+         class="btnNav w-8 h-8 relative -right-64 top-6 flex justify-center cursor-pointer transition-all  ">
+         <button id="btnNavIcon" type="button" class="text-3xl ">
+             <i class="fa-solid fa-xmark"></i>
+         </button>
+     </div>
+     
+     <!-- Logo, List -->
+     <div class="px-12 flex flex-col gap-y-2  h-screen top-0 ">
+         <!-- logo -->
+
+         <a href="#" class="self-start font-medium pl-2 pt-7 "><img
+                 src="../images/logo/logo aov.png" alt="" srcset="" class="w-24 object-cover 0"></a>
+
+         <!-- List -->
+         <ul>
+             <li class="w-auto rounded-lg flex my-2">
+                 <a href="index.html"
+                     class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
+                         class="fa-solid fa-house pl-2"></i><span class="pl-2">Home</span></a>
+             </li>
+             <li class="w-auto rounded-lg flex my-2">
+                 <a href="games.html"
+                     class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
+                         class="fa-solid fa-gamepad pl-2"></i><span class="pl-2">Games</span></a>
+             </li>
+             <li class="w-auto rounded-lg flex my-2">
+                 <a href="#"
+                     class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
+                         class="fa-solid fa-money-bill pl-2"></i><span
+                         class="pl-2">Transaksi</span></a>
+             </li>
+             <li class="w-auto rounded-lg flex my-2">
+                 <a href="#"
+                     class="hover:text-white rounded-lg transition-all duration-300 w-full hover:bg-sky-500"><i
+                         class="fa-regular fa-newspaper pl-2"></i><span class="pl-2">Blog</span></a>
+             </li>
+         </ul>
+     </div>
+     
+ </nav>
+ <!-- End Mobile Nav-->
 
     <!-- Start Section Hero -->
     <section class="w-full items-center pt-24">
