@@ -22,7 +22,7 @@
         <div class="container mx-auto md:relative md:flex-row gap-y-4 md:gap-y-0">
             <div class="flex h-[60px] justify-between">
                 <!-- Start Hamburger Menu -->
-                <div class="w-auto block md:hidden ">
+                <div class="w-auto block md:hidden py-2">
                     <div class="w-10 h-10 items-center flex justify-center rounded-md">
                         <button id="hamburger" type="button" class="font-medium md:text-2xl text-lg ">
                             <i class="fa-solid fa-bars rounded-md "></i>
@@ -122,7 +122,7 @@
     </div>
     <!-- bg offcanvas -->
     <nav
-        class="mnav bg-white fixed w-[300px]  h-screen -left-[300px] shadow-2xl md:hidden transition-all duration-300 ease-in-out z-50">
+        class="mnav bg-white fixed w-[300px] h-screen -left-[300px] shadow-2xl md:hidden transition-all duration-300 ease-in-out z-50">
 
 
         <div class="btnNav w-8 h-8 relative -right-64 top-6 flex justify-center cursor-pointer transition-all  ">
@@ -170,110 +170,119 @@
     <section class="w-full items-center pt-24">
         <div class="flex md:gap-8 mx-auto relative">
             <!-- Left Side -->
-            <div class="h-screen z-30 md:w-1/5  bg-white shadow-2xl rounded-3xl ml-8 hidden md:block sticky top-24 ...">
-                <!-- List Kategori -->
-                <form id="filterForm">
-                    <div class="ml-3 flex flex-col">
-                        <div class=" font-medium mt-8 ml-7">
-                            <h2 class="font-semibold mb-4 text-2xl">Kategori</h2>
-                            <ul class="gap-4 text-xl">
-                                <!-- List Kategori -->
-                                <li class="mb-2">
-                                    <label class="flex items-center">
-                                        <input type="checkbox" name="category"
-                                            class="form-checkbox bg-transparent rounded-sm mr-2">
-                                        <span class="text-sm">Action</span>
-                                    </label>
-                                </li>
-                                <li class="mb-2">
-                                    <label class="flex items-center">
-                                        <input type="checkbox" name="category"
-                                            class="form-checkbox bg-transparent rounded-sm mr-2">
-                                        <span class="text-sm">Adventure</span>
-                                    </label>
-                                </li>
-                                <li class="mb-2">
-                                    <label class="flex items-center">
-                                        <input type="checkbox" name="category"
-                                            class="form-checkbox bg-transparent rounded-sm mr-2">
-                                        <span class="text-sm">MMO</span>
-                                    </label>
-                                </li>
-                                <li class="mb-2">
-                                    <label class="flex items-center">
-                                        <input type="checkbox" name="category"
-                                            class="form-checkbox bg-transparent rounded-sm mr-2">
-                                        <span class="text-sm">Simulasi</span>
-                                    </label>
-                                </li>
-                                <li class="mb-2">
-                                    <label class="flex items-center">
-                                        <input type="checkbox" name="category"
-                                            class="form-checkbox bg-transparent rounded-sm mr-2">
-                                        <span class="text-sm">Strategy</span>
-                                    </label>
-                                </li>
-
-                                <!-- List Kategori -->
-                            </ul>
-                            <!-- Platform -->
-                            <h2 class="font-semibold mt-8 mb-4 text-2xl">Platform</h2>
-                            <ul class="gap-4 text-xl">
-                                <!-- List Platform -->
-                                <li class="mb-2">
-                                    <label class="flex items-center">
-                                        <input type="checkbox" name="platform"
-                                            class="form-checkbox  bg-transparent rounded-sm  mr-2">
-                                        <span class="text-sm">PC</span>
-                                    </label>
-                                </li>
-                                <li class="mb-2">
-                                    <label class="flex items-center">
-                                        <input type="checkbox" name="platform"
-                                            class="form-checkbox bg-transparent rounded-sm mr-2">
-                                        <span class="text-sm">Playstation</span>
-                                    </label>
-                                </li>
-                                <li class="mb-2">
-                                    <label class="flex items-center">
-                                        <input type="checkbox" name="platform"
-                                            class="form-checkbox bg-transparent rounded-sm mr-2">
-                                        <span class="text-sm">Mobile</span>
-                                    </label>
-                                </li>
-                                <!-- List Platform -->
-                            </ul>
-                        </div>
-                        <!-- button -->
-                        <button type="button" onclick="applyFilter()"
-                            class="bg-yellow-600 hover:bg-orange-800 text-white px-7 md:px-10 py-1 rounded-full mx-auto mt-8 text-sm md:text-lg">Apply
-                            Filter</button>
+            <div id="filterNav"
+                class="w-full h-screen inset-0 z-50 md:z-30 md:w-1/5 fixed bg-white shadow-2xl md:rounded-3xl md:ml-8 hidden md:block md:sticky md:top-24 ...">
+                <div class="flex md:flex-none flex-col relative">
+                    <!-- Btn Close -->
+                    <div class="w-8 h-8 relative -right-80 top-16 flex justify-center cursor-pointer transition-all">
+                        <button id="close-btn-filter" type="button" class="text-3xl ">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
                     </div>
-                </form>
-                <!-- List Kategori -->
+                    <!-- btn Close -->
+                    <!-- List Kategori -->
+                    <form id="filterForm">
+                        <div class="ml-3 flex flex-col">
+                            <div class="font-medium mt-8 ml-7">
+                                <h2 class="font-semibold mb-4 text-2xl">Kategori</h2>
+                                <ul class="gap-4 text-xl">
+                                    <!-- List Kategori -->
+                                    <li class="mb-2">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="category"
+                                                class="form-checkbox bg-transparent rounded-sm mr-2">
+                                            <span class="text-sm">Action</span>
+                                        </label>
+                                    </li>
+                                    <li class="mb-2">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="category"
+                                                class="form-checkbox bg-transparent rounded-sm mr-2">
+                                            <span class="text-sm">Adventure</span>
+                                        </label>
+                                    </li>
+                                    <li class="mb-2">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="category"
+                                                class="form-checkbox bg-transparent rounded-sm mr-2">
+                                            <span class="text-sm">MMO</span>
+                                        </label>
+                                    </li>
+                                    <li class="mb-2">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="category"
+                                                class="form-checkbox bg-transparent rounded-sm mr-2">
+                                            <span class="text-sm">Simulasi</span>
+                                        </label>
+                                    </li>
+                                    <li class="mb-2">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="category"
+                                                class="form-checkbox bg-transparent rounded-sm mr-2">
+                                            <span class="text-sm">Strategy</span>
+                                        </label>
+                                    </li>
 
-                <div class="flex items-center justify-between">
-                    <div class="flex space-x-6 justify-center mx-auto mb-3 mt-20">
-                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
-                                class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
-                                class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
-                                class="fa-brands fa-whatsapp"></i>
-                        </a>
-                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"><i
-                                class="fa-solid fa-phone"></i>
-                        </a>
+                                    <!-- List Kategori -->
+                                </ul>
+                                <!-- Platform -->
+                                <h2 class="font-semibold mt-8 mb-4 text-2xl">Platform</h2>
+                                <ul class="gap-4 text-xl">
+                                    <!-- List Platform -->
+                                    <li class="mb-2">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="platform"
+                                                class="form-checkbox  bg-transparent rounded-sm  mr-2">
+                                            <span class="text-sm">PC</span>
+                                        </label>
+                                    </li>
+                                    <li class="mb-2">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="platform"
+                                                class="form-checkbox bg-transparent rounded-sm mr-2">
+                                            <span class="text-sm">Playstation</span>
+                                        </label>
+                                    </li>
+                                    <li class="mb-2">
+                                        <label class="flex items-center">
+                                            <input type="checkbox" name="platform"
+                                                class="form-checkbox bg-transparent rounded-sm mr-2">
+                                            <span class="text-sm">Mobile</span>
+                                        </label>
+                                    </li>
+                                    <!-- List Platform -->
+                                </ul>
+                            </div>
+                            <!-- button -->
+                            <button type="button" onclick="applyFilter()"
+                                class="bg-yellow-600 hover:bg-orange-800 text-white px-7 md:px-10 py-1 rounded-full mx-auto mt-8 text-sm md:text-lg">Apply
+                                Filter</button>
+                        </div>
+                    </form>
+                    <!-- List Kategori -->
+                    <div class="flex items-center justify-between">
+                        <div class="flex space-x-6 justify-center mx-auto mb-3 mt-20">
+                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
+                                    class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"> <i
+                                    class="fa-brands fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white"><i
+                                    class="fa-solid fa-phone"></i>
+                            </a>
 
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- End Left -->
 
             <!-- Right Side -->
-            <div class="h-auto w-full md:w-4/5 md:mr-3 mx-2 ">
-                <div class="w-full h-[200px] md:h-[400px] flex ">
+            <div class="h-auto w-full z-30 md:w-4/5 md:mr-3 mx-2 items-center ">
+                <div class="w-full h-[200px] md:h-[400px] flex">
                     <!-- Carousel -->
                     <div class="swiper mySwiper w-full h-full rounded-3xl ml-9">
                         <div class="swiper-wrapper">
@@ -319,162 +328,212 @@
                 </div>
                 <!-- End Carousel -->
 
+                <!-- Start Btn Filter -->
+                <div class="w-auto block md:hidden py-2 mt-10">
+                    <button id="filter-btn" type="button"
+                        class="items-center flex justify-center rounded-md md:text-2xl text-lg px-6 bg-white hover:bg-sky-500 font-semibold">
+                        Filter
+                    </button>
+                </div>
+                <!-- End Btn Filter -->
+
+                <!-- H2 -->
+                <div class="text-white flex justify-start py-4 pt-12">
+                    <h2 class="h2 text-lg md:text-3xl font-semibold"><i class="fa-solid fa-fire mr-3"></i>Rilis Terbaru
+                    </h2>
+                </div>
+                <!-- H2 -->
+
                 <!-- Game Menu -->
-                <div
-                    class="grid text-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 md:mr-2 gap-5 justify-between pt-24">
-                    <!-- Start Card 1 -->
-                    <a href="#" tabindex="0">
-                        <div
-                            class="min-w-[30px] md:min-w-[200px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 md:rounded-2x h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
-                            <div class="w-full h-100 md:h-[200px]">
-                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
-                            </div>
-                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
-                                <h4 class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
-                                    Valorant</h4>
-                                <p class="text-xxs md:text-sm">Riot Games</p>
-                            </div>
+                <div class="grid text-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 md:mr-2 gap-8 justify-center pt-5 ">
 
+                    <!-- Start Card 1 -->
+                    <div
+                        class="min-w-[30px] max-w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:rounded-2x h-[150]  z-20 backdrop-blur-xl backdrop-brightness-105">
+                        <a href="#" tabindex="0"></a>
+                        <div class="w-full min-h-100 ">
+                            <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
                         </div>
-                    </a>
+                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                            <h4 class="truncate text-xxs font-semibold ">
+                                Valorant</h4>
+                            <p class="text-xxs md:text-sm">Riot Games</p>
+                        </div>
+                        </a>
+                    </div>
                     <!-- End Card 1 -->
                     <!-- Start Card 1 -->
-                    <a href="#" tabindex="0">
-                        <div
-                            class="min-w-[30px] md:min-w-[200px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 gap-3 md:rounded-2x border-2 hover:border-none hover:border-0 h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
-                            <div class="w-full h-[100] md:h-[200px]">
-                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
-                            </div>
-                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
-                                <h4 class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
-                                    Valorant</h4>
-                                <p class="text-xxs md:text-sm">Riot Games</p>
-                            </div>
-
+                    <div
+                        class="min-w-[30px] max-w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:rounded-2x h-[150]  z-20 backdrop-blur-xl backdrop-brightness-105">
+                        <a href="#" tabindex="0"></a>
+                        <div class="w-full min-h-100 ">
+                            <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
                         </div>
-                    </a>
+                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                            <h4 class="truncate text-xxs font-semibold ">
+                                Valorant</h4>
+                            <p class="text-xxs md:text-sm">Riot Games</p>
+                        </div>
+                        </a>
+                    </div>
                     <!-- End Card 1 -->
                     <!-- Start Card 1 -->
-                    <a href="#" tabindex="0">
-                        <div
-                            class="min-w-[30px] md:min-w-[200px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 gap-3 md:rounded-2x border-2 hover:border-none hover:border-0 h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
-                            <div class="w-full h-[100] md:h-[200px]">
-                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
-                            </div>
-                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
-                                <h4 class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
-                                    Valorant</h4>
-                                <p class="text-xxs md:text-sm">Riot Games</p>
-                            </div>
-
+                    <div
+                        class="min-w-[30px] max-w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:rounded-2x h-[150]  z-20 backdrop-blur-xl backdrop-brightness-105">
+                        <a href="#" tabindex="0"></a>
+                        <div class="w-full min-h-100 ">
+                            <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
                         </div>
-                    </a>
+                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                            <h4 class="truncate text-xxs font-semibold ">
+                                Valorant</h4>
+                            <p class="text-xxs md:text-sm">Riot Games</p>
+                        </div>
+                        </a>
+                    </div>
                     <!-- End Card 1 -->
                     <!-- Start Card 1 -->
-                    <a href="#" tabindex="0">
-                        <div
-                            class="min-w-[30px] md:min-w-[200px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 gap-3 md:rounded-2x border-2 hover:border-none hover:border-0 h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
-                            <div class="w-full h-[100] md:h-[200px]">
-                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
-                            </div>
-                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
-                                <h4 class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
-                                    Valorant</h4>
-                                <p class="text-xxs md:text-sm">Riot Games</p>
-                            </div>
-
+                    <div
+                        class="min-w-[30px] max-w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:rounded-2x h-[150]  z-20 backdrop-blur-xl backdrop-brightness-105">
+                        <a href="#" tabindex="0"></a>
+                        <div class="w-full min-h-100 ">
+                            <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
                         </div>
-                    </a>
+                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                            <h4 class="truncate text-xxs font-semibold ">
+                                Valorant</h4>
+                            <p class="text-xxs md:text-sm">Riot Games</p>
+                        </div>
+                        </a>
+                    </div>
                     <!-- End Card 1 -->
-
+                    <!-- Start Card 1 -->
+                    <div
+                        class="min-w-[30px] max-w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:rounded-2x h-[150]  z-20 backdrop-blur-xl backdrop-brightness-105">
+                        <a href="#" tabindex="0"></a>
+                        <div class="w-full min-h-100 ">
+                            <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
+                        </div>
+                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                            <h4 class="truncate text-xxs font-semibold ">
+                                Valorant</h4>
+                            <p class="text-xxs md:text-sm">Riot Games</p>
+                        </div>
+                        </a>
+                    </div>
+                    <!-- End Card 1 -->
                 </div>
                 <!-- Game Menu -->
 
+                <!-- H2 -->
+                <div class="text-white flex justify-start py-4 pt-12">
+                    <h2 class="h2 text-lg md:text-3xl font-semibold"><i class="fa-solid fa-fire mr-3"></i>Rilis Terbaru
+                    </h2>
+                </div>
+                <!-- H2 -->
+
                 <!-- Game Menu -->
-                <div class="grid text-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 justify-between pt-24">
-                    <!-- Start Card 1 -->
-                    <a href="#" tabindex="0">
-                        <div
-                            class="w-[100] md:w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 md:rounded-2x h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
-                            <div class="w-full h-[100] md:h-[200px]">
-                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
-                            </div>
-                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
-                                <h4 class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
-                                    Valorant</h4>
-                                <p class="text-xxs md:text-sm">Riot Games</p>
-                            </div>
+                <div class="grid text-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 md:mr-2 gap-8 justify-center pt-5 ">
 
+                    <!-- Start Card 1 -->
+                    <div
+                        class="min-w-[30px] max-w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:rounded-2x h-[150]  z-20 backdrop-blur-xl backdrop-brightness-105">
+                        <a href="#" tabindex="0"></a>
+                        <div class="w-full min-h-100 ">
+                            <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
                         </div>
-                    </a>
+                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                            <h4 class="truncate text-xxs font-semibold ">
+                                Valorant</h4>
+                            <p class="text-xxs md:text-sm">Riot Games</p>
+                        </div>
+                        </a>
+                    </div>
                     <!-- End Card 1 -->
                     <!-- Start Card 1 -->
-                    <a href="#" tabindex="0">
-                        <div
-                            class="w-[100] md:w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 gap-3 md:rounded-2x border-2 hover:border-none hover:border-0 h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
-                            <div class="w-full h-[100] md:h-[200px]">
-                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
-                            </div>
-                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
-                                <h4 class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
-                                    Valorant</h4>
-                                <p class="text-xxs md:text-sm">Riot Games</p>
-                            </div>
-
+                    <div
+                        class="min-w-[30px] max-w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:rounded-2x h-[150]  z-20 backdrop-blur-xl backdrop-brightness-105">
+                        <a href="#" tabindex="0"></a>
+                        <div class="w-full min-h-100 ">
+                            <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
                         </div>
-                    </a>
+                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                            <h4 class="truncate text-xxs font-semibold ">
+                                Valorant</h4>
+                            <p class="text-xxs md:text-sm">Riot Games</p>
+                        </div>
+                        </a>
+                    </div>
                     <!-- End Card 1 -->
                     <!-- Start Card 1 -->
-                    <a href="#" tabindex="0">
-                        <div
-                            class="w-[100] md:w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 gap-3 md:rounded-2x border-2 hover:border-none hover:border-0 h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
-                            <div class="w-full h-[100] md:h-[200px]">
-                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
-                            </div>
-                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
-                                <h4 class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
-                                    Valorant</h4>
-                                <p class="text-xxs md:text-sm">Riot Games</p>
-                            </div>
-
+                    <div
+                        class="min-w-[30px] max-w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:rounded-2x h-[150]  z-20 backdrop-blur-xl backdrop-brightness-105">
+                        <a href="#" tabindex="0"></a>
+                        <div class="w-full min-h-100 ">
+                            <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
                         </div>
-                    </a>
+                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                            <h4 class="truncate text-xxs font-semibold ">
+                                Valorant</h4>
+                            <p class="text-xxs md:text-sm">Riot Games</p>
+                        </div>
+                        </a>
+                    </div>
                     <!-- End Card 1 -->
                     <!-- Start Card 1 -->
-                    <a href="#" tabindex="0">
-                        <div
-                            class="w-[100] md:w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-emerald-300 gap-3 md:rounded-2x border-2 hover:border-none hover:border-0 h-[150] md:h-[300px] z-20 backdrop-blur-xl backdrop-brightness-105">
-                            <div class="w-full h-[100] md:h-[200px]">
-                                <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                                    class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
-                            </div>
-                            <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                            <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
-                                <h4 class="w-[100px] truncate text-xxs font-semibold sm:w-[200px] md:w-[275px] ">
-                                    Valorant</h4>
-                                <p class="text-xxs md:text-sm">Riot Games</p>
-                            </div>
-
+                    <div
+                        class="min-w-[30px] max-w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:rounded-2x h-[150]  z-20 backdrop-blur-xl backdrop-brightness-105">
+                        <a href="#" tabindex="0"></a>
+                        <div class="w-full min-h-100 ">
+                            <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
                         </div>
-                    </a>
+                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                            <h4 class="truncate text-xxs font-semibold ">
+                                Valorant</h4>
+                            <p class="text-xxs md:text-sm">Riot Games</p>
+                        </div>
+                        </a>
+                    </div>
                     <!-- End Card 1 -->
-
+                    <!-- Start Card 1 -->
+                    <div
+                        class="min-w-[30px] max-w-[250px] p-3 flex-col items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:rounded-2x h-[150]  z-20 backdrop-blur-xl backdrop-brightness-105">
+                        <a href="#" tabindex="0"></a>
+                        <div class="w-full min-h-100 ">
+                            <img src="../images/logo/valorant.jpeg" alt="Game Logo"
+                                class="relative aspect-square h-full w-full rounded-lg object-cover object-center ring-1 md:rounded-xl" />
+                        </div>
+                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
+                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2 mt-6">
+                            <h4 class="truncate text-xxs font-semibold ">
+                                Valorant</h4>
+                            <p class="text-xxs md:text-sm">Riot Games</p>
+                        </div>
+                        </a>
+                    </div>
+                    <!-- End Card 1 -->
                 </div>
                 <!-- Game Menu -->
+
+
             </div>
         </div>
     </section>
