@@ -17,8 +17,8 @@ const mobileNav = document.querySelector('.mnav');
 const openBtn = document.querySelector('#hamburger');
 const closeBtn = document.querySelector('.btnNav');
 const navOpenClass = 'left-0';
-
 const bgOff = 'hidden';
+
 function toggleNav() {
     mobileNav.classList.toggle(navOpenClass);
     bgOffcanvas.classList.toggle(bgOff);
@@ -30,10 +30,12 @@ closeBtn.addEventListener('click', toggleNav);
 const btnFilter = document.querySelector('#filter-btn');
 const filter = document.querySelector('#filterNav');
 const closeFilter = document.querySelector('#close-btn-filter');
-const filterSwap = 'hidden';
+const filterSwap = '-left-full';
 function toggleFilter(){
    filter.classList.toggle(filterSwap);
-
+    
 }
 btnFilter.addEventListener('click', toggleFilter);
 closeFilter.addEventListener('click', toggleFilter);
+
+

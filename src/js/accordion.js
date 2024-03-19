@@ -56,3 +56,6 @@ accordion.close('accordion-example-heading-2');
 
 // toggle visibility of item based on id
 accordion.close('accordion-example-heading-3');
+
+
+
