@@ -75,19 +75,23 @@
                     <!-- Search -->
                     <div
                         class="transition-colors duration-300 ease-out hover:text-white hover:bg-slate-600  w-10 h-10 items-center flex justify-center rounded-md focus:text-white focus:bg-slate-600">
-                        <button id="search" type="button" class="font-medium md:text-2xl text-lg "><i
+                        <button id="searchBtn" type="button" class="font-medium md:text-2xl text-lg "><i
                                 class="fa-solid fa-magnifying-glass"></i></button>
-                        <!-- Search Form -->
-                        <!-- <form action=""
-                        class="absolute -bottom-20 flex items-center self-end bg-slate-300 rounded-xl w-[370px] h-[50px]">
-                        <label for="nav-search" class="mx-5">
-                            <i class="fa-solid fa-magnifying-glass mr-2"></i>
-                        </label>
-                        <input type="text" id="nav-search" placeholder="Search..."
-                            class="outline-none w-[300px] h-[40px] placeholder:italic bg-transparent border-l-2 border-slate-500">
-                    </form> -->
+                     
                     </div>
-
+                       <!-- Search Form -->
+                       <div id="searchModal" class="modal hidden z-50">
+                       <div class="w-screen h-screen fixed inset-0 bg-slate-700 bg-opacity-80 left-0 top-0 closeBtn"></div>
+                       <form action=""
+                       class="absolute -bottom-20 flex items-center self-end bg-slate-800 rounded-xl inset-0 mx-auto w-[300px] md:w-[600px] h-[50px] text-white">
+                       <label for="nav-search" class="mx-2 pl-2">
+                           <i class="fa-solid fa-magnifying-glass mr-2 "></i>
+                       </label>
+                       <input type="text" id="nav-search" placeholder="Search..."
+                           class="outline-none w-full h-full placeholder:italic rounded-r-lg border-none bg-slate-800 focus:outline-none focus:ring-0 focus:border-0 hover:rounded-lg">
+                   </form>
+                </div>
+                <!--  -->
                     <!--  Cart  -->
                     <div class=" ">
                         <a href="#" id="cart"
@@ -637,7 +641,7 @@
     <script src="../js/carouselSwiper.js"></script>
     <script src="../js/accordion.js"></script>
     <script src="../js/anchorLink.js"></script>
-
+    <script src="../js/modal.js"></script>
 </body>
 
 </html>
