@@ -77,21 +77,22 @@
                         class="transition-colors duration-300 ease-out hover:text-white hover:bg-slate-600  w-10 h-10 items-center flex justify-center rounded-md focus:text-white focus:bg-slate-600">
                         <button id="searchBtn" type="button" class="font-medium md:text-2xl text-lg "><i
                                 class="fa-solid fa-magnifying-glass"></i></button>
-                     
+
                     </div>
-                       <!-- Search Form -->
-                       <div id="searchModal" class="modal hidden z-50">
-                       <div class="w-screen h-screen fixed inset-0 bg-slate-700 bg-opacity-80 left-0 top-0 closeBtn"></div>
-                       <form action=""
-                       class="absolute -bottom-20 flex items-center self-end bg-slate-800 rounded-xl inset-0 mx-auto w-[300px] md:w-[600px] h-[50px] text-white">
-                       <label for="nav-search" class="mx-2 pl-2">
-                           <i class="fa-solid fa-magnifying-glass mr-2 "></i>
-                       </label>
-                       <input type="text" id="nav-search" placeholder="Search..."
-                           class="outline-none w-full h-full placeholder:italic rounded-r-lg border-none bg-slate-800 focus:outline-none focus:ring-0 focus:border-0 hover:rounded-lg">
-                   </form>
-                </div>
-                <!--  -->
+                    <!-- Search Form -->
+                    <div id="searchModal" class="modal hidden z-50">
+                        <div class="w-screen h-screen fixed inset-0 bg-slate-700 bg-opacity-80 left-0 top-0 closeBtn">
+                        </div>
+                        <form action=""
+                            class="absolute -bottom-20 flex items-center self-end bg-slate-800 rounded-xl inset-0 mx-auto w-[300px] md:w-[600px] h-[50px] text-white">
+                            <label for="nav-search" class="mx-2 pl-2">
+                                <i class="fa-solid fa-magnifying-glass mr-2 "></i>
+                            </label>
+                            <input type="text" id="nav-search" placeholder="Search..."
+                                class="outline-none w-full h-full placeholder:italic rounded-r-lg border-none bg-slate-800 focus:outline-none focus:ring-0 focus:border-0 hover:rounded-lg">
+                        </form>
+                    </div>
+                    <!--  -->
                     <!--  Cart  -->
                     <div class=" ">
                         <a href="#" id="cart"
@@ -101,20 +102,33 @@
                     <!-- User -->
                     <a href="login.html"
                         class="font-semibold transition-colors duration-300 ease-out hover:text-white hidden md:block text-md md:text-xl">Login</a>
-                    <div class=" block md:hidden ">
+                        <!-- btn user Mobile -->
+                    <div class=" block md:hidden relative">
                         <button id="menu-user" type="button"
                             class="font-medium text-lg md:text-xl hover:text-white hover:bg-slate-600 ml-2 w-10 h-10 items-center flex justify-center rounded-md focus:text-white focus:bg-slate-600"><i
                                 class="fa-solid fa-user"></i></button>
+                        <!-- Dropdown -->
+                        <div id="myDropdown"
+                            class="dropdown-content absolute top-14 right-0  rounded-xl  w-[120px] h-auto  bg-white  items-center py-2 hidden">
+                            <div class="flex flex-col mx-auto w-full h-full items-center">
+                                <a href="login.html"
+                                    class="font-semibold transition-colors duration-300 ease-out hover:text-white text-md md:text-xl">Login</a>
+                                <a href="register.html"
+                                    class="px-4 py-2 text-xs md:text-md font-bold text-white uppercase transition-all duration-150 bg-cyan-700 rounded shadow outline-none active:bg-emerald-600 hover:shadow-md focus:outline-none ease ">
+                                    Daftar
+                                </a>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <a href="register.html"
+                            class="px-4 py-2 text-xs md:text-md font-bold text-white uppercase transition-all duration-150 bg-cyan-700 rounded shadow outline-none active:bg-emerald-600 hover:shadow-md focus:outline-none ease hidden md:block">
+                            Daftar
+                        </a>
                     </div>
-                    <a href="register.html"
-                        class="px-4 py-2 text-xs md:text-md font-bold text-white uppercase transition-all duration-150 bg-cyan-700 rounded shadow outline-none active:bg-emerald-600 hover:shadow-md focus:outline-none ease hidden md:block">
-                        Daftar
-                    </a>
-                </div>
 
-                <!-- End Search, Login -->
+                    <!-- End Search, Login -->
+                </div>
             </div>
-        </div>
 
     </header>
     <!-- END Header -->
@@ -346,7 +360,7 @@
             <!-- Card Games -->
             <div class="grid text-center grid-cols-2 md:grid-cols-3 gap-3 justify-center ">
                 <!-- Start Card 1 -->
-                <a href="login.html" tabindex="0">
+                <a href="order.html" tabindex="0">
                     <div
                         class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
                         <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
@@ -362,7 +376,7 @@
                 </a>
                 <!-- End Card 1 -->
                 <!-- Start Card 1 -->
-                <a href="login.html" tabindex="0">
+                <a href="order.html" tabindex="0">
                     <div
                         class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
                         <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
@@ -378,7 +392,7 @@
                 </a>
                 <!-- End Card 1 -->
                 <!-- Start Card 1 -->
-                <a href="login.html" tabindex="0">
+                <a href="order.html" tabindex="0">
                     <div
                         class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
                         <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
@@ -394,7 +408,7 @@
                 </a>
                 <!-- End Card 1 -->
                 <!-- Start Card 1 -->
-                <a href="login.html" tabindex="0">
+                <a href="order.html" tabindex="0">
                     <div
                         class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
                         <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
@@ -410,7 +424,7 @@
                 </a>
                 <!-- End Card 1 -->
                 <!-- Start Card 1 -->
-                <a href="login.html" tabindex="0">
+                <a href="order.html" tabindex="0">
                     <div
                         class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
                         <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
@@ -426,7 +440,7 @@
                 </a>
                 <!-- End Card 1 -->
                 <!-- Start Card 1 -->
-                <a href="login.html" tabindex="0">
+                <a href="order.html" tabindex="0">
                     <div
                         class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
                         <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
@@ -459,7 +473,7 @@
 
             <div class="grid text-center grid-cols-2 md:grid-cols-4 gap-5 justify-between">
                 <!-- card 1 -->
-                <a href="" tabindex="0">
+                <a href="order.html" tabindex="0">
                     <div
                         class="relative grid grid-cols-1 bg-clip-border  text-gray-700 shadow-md w-auto min-h-[240px] md:h-[350px] items-center content-end border-4 border-white rounded-2xl">
                         <img src="../images/content/apex-legends.jpg" alt=""
@@ -480,7 +494,7 @@
                 </a>
                 <!-- card 1 -->
                 <!-- card 1 -->
-                <a href="" tabindex="0">
+                <a href="order.html" tabindex="0">
                     <div
                         class="relative grid grid-cols-1 bg-clip-border  text-gray-700 shadow-md w-auto min-h-[240px] md:h-[350px] items-center content-end border-4 border-white rounded-2xl">
                         <img src="../images/content/apex-legends.jpg" alt=""
@@ -501,7 +515,7 @@
                 </a>
                 <!-- card 1 -->
                 <!-- card 1 -->
-                <a href="" tabindex="0">
+                <a href="order.html" tabindex="0">
                     <div
                         class="relative grid grid-cols-1 bg-clip-border  text-gray-700 shadow-md w-auto min-h-[240px] md:h-[350px] items-center content-end border-4 border-white rounded-2xl">
                         <img src="../images/content/apex-legends.jpg" alt=""
@@ -522,7 +536,7 @@
                 </a>
                 <!-- card 1 -->
                 <!-- card 1 -->
-                <a href="" tabindex="0">
+                <a href="order.html" tabindex="0">
                     <div
                         class="relative grid grid-cols-1 bg-clip-border  text-gray-700 shadow-md w-auto min-h-[240px] md:h-[350px] items-center content-end border-4 border-white rounded-2xl">
                         <img src="../images/content/apex-legends.jpg" alt=""
@@ -642,6 +656,7 @@
     <script src="../js/accordion.js"></script>
     <script src="../js/anchorLink.js"></script>
     <script src="../js/modal.js"></script>
+    <script src="../js/dropdown.js"></script>
 </body>
 
 </html>
