@@ -1,9 +1,7 @@
-
 const accordionElement = document.getElementById('accordion-flush');
 
 // create an array of objects with the id, trigger element (eg. button), and the content element
-const accordionItems = [
-    {
+const accordionItems = [{
         id: 'accordion-heading-1',
         triggerEl: document.querySelector('#accordion-heading-1'),
         targetEl: document.querySelector('#accordion-body-1'),
@@ -21,7 +19,7 @@ const accordionItems = [
         targetEl: document.querySelector('#accordion-body-3'),
         active: false
     },
-   
+
 ];
 
 // options with default values
@@ -30,13 +28,13 @@ const options = {
     activeClasses: 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white',
     inactiveClasses: 'text-gray-500 dark:text-gray-400 bg-white',
     onOpen: (item) => {
-       
+
     },
     onClose: (item) => {
-        
+
     },
     onToggle: (item) => {
-       
+
     },
 };
 
@@ -45,8 +43,8 @@ const options = {
 const instanceOptions = {
     id: 'accordion-flush',
     override: true
-   
-    
+
+
 };
 
 
@@ -58,4 +56,3 @@ accordion.close('accordion-heading-1');
 accordion.close('accordion-heading-2');
 
 accordion.close('accordion-heading-3');
-

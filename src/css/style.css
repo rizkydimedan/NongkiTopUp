@@ -9,6 +9,7 @@ body {
   
 }
 
+
 h1,h2,h3,h4,h5,h6 {
     @apply font-primary leading-[120%];
 
@@ -64,6 +65,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 /* Accordion */
+.content-item.open .content-body{
+    @apply h-full ;
+}
 
 
 @media (min-width: 1440px){.swiper-container{

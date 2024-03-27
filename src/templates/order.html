@@ -18,10 +18,10 @@
 
 </head>
 
-<body class="bg-cyan-500 bg-gradient-to-r from-slate-400 ..."">
-        <!-- Start Header -->
-        <header class=" pt-2 top-0 fixed z-40 w-full shadow-lg items-center ">
-            <div class=" container mx-auto md:relative md:flex-row gap-y-4 md:gap-y-0 top-navbar">
+<body class="bg-slate-300 bg-gradient-to-r from-slate-400 ..."">
+      <!-- Start Header -->
+    <header class=" pt-2 top-0 fixed z-40 w-full shadow-lg items-center ">
+        <div class=" container mx-auto md:relative md:flex-row gap-y-4 md:gap-y-0 top-navbar">
     <div class="flex h-[60px] justify-between">
         <!-- Start Hamburger Menu -->
         <div class="w-auto block md:hidden py-2">
@@ -94,14 +94,14 @@
             </div>
             <!--  -->
             <!--  Cart  -->
-            <div class=" ">
+            <div class="">
                 <a href="#" id="cart"
                     class="font-medium text-lg md:text-2xl hover:text-white hover:bg-slate-600 mr-2 w-10 h-10 items-center flex justify-center rounded-md focus:text-white focus:bg-slate-600"><i
                         class="fa-solid fa-cart-shopping"></i></a>
             </div>
             <!-- User -->
             <a href="login.html"
-                class="font-semibold transition-colors duration-300 ease-out hover:text-white hidden md:block text-md md:text-xl">Login</a>
+                class="font-semibold transition-colors duration-300 ease-out hover:text-white hidden md:block text-sm  ml-4 px-4 py-2 rounded ">Masuk</a>
             <!-- btn user Mobile -->
             <div class=" block md:hidden relative">
                 <button id="menu-user" type="button"
@@ -109,21 +109,20 @@
                         class="fa-solid fa-user"></i></button>
                 <!-- Dropdown -->
                 <div id="myDropdown"
-                    class="dropdown-content absolute top-14 right-0  rounded-xl  w-[120px] h-auto  bg-white  items-center py-2 hidden">
-                    <div class="flex flex-col mx-auto w-full h-full items-center">
+                    class="dropdown-content absolute top-14 right-0  rounded-xl  w-[120px] h-auto  bg-white  items-center py-2 hidden ">
+                    <div class="flex flex-col mx-auto w-full h-full items-center gap-y-2 px-5">
                         <a href="login.html"
-                            class="font-semibold transition-colors duration-300 ease-out hover:text-slate-600 text-md md:text-xl">Login</a>
+                            class="font-semibold transition-colors duration-300 ease-out hover:text-slate-600 text-sm">Masuk</a>
                         <a href="register.html"
-                            class="px-4 py-2 text-xs md:text-md font-bold text-white uppercase transition-all duration-150 bg-cyan-700 rounded shadow outline-none active:bg-emerald-600 hover:shadow-md focus:outline-none ease ">
+                            class="px-4 py-2 text-xs font-bold text-white  transition-all duration-150 bg-cyan-700 rounded shadow outline-none hover:bg-emerald-600 hover:shadow-md focus:outline-none ease ">
                             Daftar
                         </a>
                     </div>
                 </div>
-
             </div>
             <!--  -->
             <a href="register.html"
-                class="px-4 py-2 text-xs md:text-md font-bold text-white uppercase transition-all duration-150 bg-cyan-700 rounded shadow outline-none active:bg-emerald-600 hover:shadow-md focus:outline-none ease hidden md:block">
+                class="px-4 py-2 text-sm font-semibold text-white  transition-all duration-150 bg-cyan-700 rounded shadow outline-none active:bg-emerald-600 hover:shadow-md focus:outline-none ease-in-out hidden md:block">
                 Daftar
             </a>
 
@@ -192,11 +191,11 @@
         </div>
         <div class=" container h-[200px] flex top-10 md:top-0 relative mx-auto  ">
             <!-- IMG LOGO -->
-            <div
-                class="flex flex-row  left-5 gap-2 md:gap-x-5 justify-center text-start items-center relative ">
+            <div class="flex flex-row  gap-x-5 justify-center text-start items-center relative ">
                 <div
                     class="w-[130px] h-[130px] md:w-[170px] md:h-[170px] aspect-square rounded-xl bg-black flex ring-8  ring-slate-600">
-                    <img src="../images/logo/logo valorant.png" alt="" class="object-contain object-center p-1 ">
+                    <img src="../images/logo/logo valorant.png" alt=""
+                        class="object-contain object-center p-1 cursor-pointer">
                 </div>
 
                 <div class="relative text-white mt-9 drop-shadow-2xl">
@@ -268,7 +267,9 @@
                                 <h4 class=" text-sm font-semibold  md:text-base text-ellipsis overflow-hidden">
                                     5 Diamond</h4>
                                 <p class="text-xs md:text-sm text-ellipsis overflow-hidden">Rp 1000</p>
-                                <p class="text-xs md:text-sm text-ellipsis overflow-hidden line-through text-white italic mt-2 bg-red-600 w-20 animate-pulse skew-y-3">Rp 2000</p>
+                                <p
+                                    class="text-xs md:text-sm text-ellipsis overflow-hidden line-through text-white italic mt-2 bg-red-600 w-20 animate-pulse skew-y-3">
+                                    Rp 2000</p>
                             </div>
                         </div>
                         <!-- End Card 1 -->
@@ -493,44 +494,25 @@
 
                             <!-- START: Choose Payment-->
                             <div class="flex flex-col mb-4 w-full h-auto">
-                                <label class="text-sm md:text-lg font-semibold mb-2 ">
+                                <label class="text-sm md:text-lg font-semibold mb-2 gap-y-2">
                                     Pilih Pembayaran
                                 </label>
-                                <div class="flex flex-wrap relative h-auto ">
-
-                                    <!-- START: Payment 1-->
-                                    <!-- <div class="px-2 w-full h-14 mb-4  ">
-                                        <button  data-name="payment" type="button"  id="accordion-btn-1"
-                                            class="border border-gray-200 border-t-2 border-b-2 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full p-2 accordion-button-1">
-                                            <img src="../images/logo/Shopepay logo.png" alt="dhl"
-                                                class="object-contain max-h-full" />
-                                        </button>
-                                        <div class="accordion-content-1">
-                                            <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                                                <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-                                                <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
-                                              </div>
-                                        </div>
-                                    </div> -->
-                                    <!--  END: Payment 1-->
-                                    <!-- Start: Pilih Pembayaran -->
-                                    <div id="accordion-flush" data-accordion="collapse" class="w-full">
-                                        <!-- Accordion 1 -->
-                                        <button id="accordion-heading-1" type="button"
-                                            class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3 rounded-2xl px-2"
-                                            data-accordion-target="#accordion-body-1" aria-expanded="true"
-                                            aria-controls="accordion-body-1">
-                                            <h2>E-Wallet</h2>
-                                            <svg data-accordion-icon class="w-4 h-3 rotate-180 shrink-0"
-                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                            </svg>
-                                        </button>
-                                        <!-- Accordion Content -->
-                                        <div id="accordion-body-1" class="" aria-labelledby="accordion-heading-1">
-                                            <div class="text-white py-5  flex flex-col gap-2 ">
+                                <!-- Item Wrapper -->
+                                <div class="flex flex-wrap relative px-auto pb-2 gap-y-2">
+                                        <!-- Item -->
+                                        <div
+                                            class="content-item border-b py-2 cursor-pointer select-none w-full">
+                                            <!-- Title & icon -->
+                                            <div class="flex items-center justify-between mb-[10px]">
+                                                <h4 class="font-semibold text-sm md:text-base">
+                                                    E-Wallet
+                                                </h4>
+                                                <div class="icon-btn">
+                                                    <i class="fa-solid fa-chevron-down"></i>
+                                                </div>
+                                            </div>
+                                            <!-- content -->
+                                            <div class="content-body h-0 overflow-hidden flex flex-col gap-y-2">
                                                 <!-- Start Card 1 -->
                                                 <div
                                                     class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 h-[80px] cursor-pointer ">
@@ -546,7 +528,7 @@
                                                         <p class="text-xs md:text-sm mt-1">Rp. 1000</p>
                                                     </div>
                                                 </div>
-                                                <!-- End Card 1 -->
+
                                                 <!-- Start Card 1 -->
                                                 <div
                                                     class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 h-[80px] cursor-pointer ">
@@ -561,88 +543,62 @@
                                                         <p class="text-xxs md:text-sm">Dicek Otomatis</p>
                                                         <p class="text-xs md:text-sm mt-1">Rp. 1000</p>
                                                     </div>
-
                                                 </div>
                                                 <!-- End Card 1 -->
                                             </div>
                                         </div>
-                                        <!-- Accordion 1 -->
+                                        <!-- End Item -->
+                                         <!-- Item -->
+                                         <div
+                                         class="content-item border-b py-2 cursor-pointer select-none w-full">
+                                         <!-- Title & icon -->
+                                         <div class="flex items-center justify-between mb-[10px]">
+                                             <h4 class="font-semibold text-sm md:text-base">
+                                                 Virual Account
+                                             </h4>
+                                             <div class="icon-btn">
+                                                 <i class="fa-solid fa-chevron-down"></i>
+                                             </div>
+                                         </div>
+                                         <!-- content -->
+                                         <div class="content-body h-0 overflow-hidden flex flex-col gap-y-2">
+                                             <!-- Start Card 1 -->
+                                             <div
+                                                 class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 h-[80px] cursor-pointer ">
+                                                 <div class="w-32 h-[60px] relative rounded-xl">
+                                                     <img src="../images/logo/logoDana.png" alt="Game Logo"
+                                                         class=" aspect-square h-full w-full rounded-lg !object-contain !object-center md:rounded-xl left-0">
+                                                 </div>
+                                                 <div
+                                                     class="relative flex w-full flex-col text-white text-start justify-start pl-2">
+                                                     <h4 class=" truncate text-xxs font-semibold  md:text-base">
+                                                         Dana</h4>
+                                                     <p class="text-xxs md:text-sm">Dicek Otomatis</p>
+                                                     <p class="text-xs md:text-sm mt-1">Rp. 1000</p>
+                                                 </div>
+                                             </div>
 
-                                        <!-- Accordion 2 -->
-                                        <button id="accordion-heading-2" type="button"
-                                            class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3 rounded-2xl px-2 mt-4"
-                                            data-accordion-target="#accordion-body-2" aria-expanded="true"
-                                            aria-controls="accordion-body-2">
-                                            <h2>Virtual Account</h2>
-                                            <svg data-accordion-icon class="w-4 h-3 rotate-180 shrink-0"
-                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                            </svg>
-                                        </button>
-                                        <!-- Accordion Content -->
-                                        <div id="accordion-body-2" class="hidden" aria-labelledby="accordion-heading-2">
-                                            <div class="text-white py-5  flex flex-col gap-2">
-                                                <!-- Start Card 1 -->
-                                                <div
-                                                    class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 h-[80px] cursor-pointer ">
-                                                    <div class="w-32 h-[60px] relative rounded-xl">
-                                                        <img src="../images/logo/logoDana.png" alt="Game Logo"
-                                                            class=" aspect-square h-full w-full rounded-lg !object-contain !object-center md:rounded-xl left-0">
-                                                    </div>
-                                                    <div
-                                                        class="relative flex w-full flex-col text-white text-start justify-start pl-2">
-                                                        <h4 class=" truncate text-xxs font-semibold  md:text-base">
-                                                            Dana</h4>
-                                                        <p class="text-xxs md:text-sm">Dicek Otomatis</p>
-                                                        <p class="text-xs md:text-sm mt-1">Rp. 1000</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Card 1 -->
-
-                                            </div>
-                                        </div>
-                                        <!-- Accordion 2 -->
-                                        <!-- Accordion 3 -->
-                                        <button id="accordion-heading-3" type="button"
-                                            class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3 rounded-2xl px-2 mt-4"
-                                            data-accordion-target="#accordion-body-3" aria-expanded="true"
-                                            aria-controls="accordion-body-3">
-                                            <h2>Indomaret</h2>
-                                            <svg data-accordion-icon class="w-4 h-3 rotate-180 shrink-0"
-                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 10 6">
-                                                <path stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5" />
-                                            </svg>
-                                        </button>
-                                        <!-- Accordion Content -->
-                                        <div id="accordion-body-3" class="hidden" aria-labelledby="accordion-heading-3">
-                                            <div class="text-white py-5  flex flex-col gap-2">
-                                                <!-- Start Card 1 -->
-                                                <div
-                                                    class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 h-[80px] cursor-pointer ">
-                                                    <div class="w-32 h-[60px] relative rounded-xl">
-                                                        <img src="../images/logo/logoDana.png" alt="Game Logo"
-                                                            class=" aspect-square h-full w-full rounded-lg !object-contain !object-center md:rounded-xl left-0">
-                                                    </div>
-                                                    <div
-                                                        class="relative flex w-full flex-col text-white text-start justify-start pl-2">
-                                                        <h4 class=" truncate text-xxs font-semibold  md:text-base">
-                                                            Dana</h4>
-                                                        <p class="text-xxs md:text-sm">Dicek Otomatis</p>
-                                                        <p class="text-xs md:text-sm mt-1">Rp. 1000</p>
-                                                    </div>
-                                                </div>
-                                                <!-- End Card 1 -->
-
-                                            </div>
-                                        </div>
-                                        <!-- Accordion 3 -->
-                                    </div>
-                                    <!-- End: Pilih Pembayaran -->
+                                             <!-- Start Card 1 -->
+                                             <div
+                                                 class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 h-[80px] cursor-pointer ">
+                                                 <div class="w-32 h-[60px] relative rounded-xl">
+                                                     <img src="../images/logo/Shopepay logo.png" alt="Game Logo"
+                                                         class=" aspect-square h-full w-full rounded-lg !object-contain !object-center md:rounded-xl left-0">
+                                                 </div>
+                                                 <div
+                                                     class="relative flex w-full flex-col text-white text-start justify-start pl-2">
+                                                     <h4 class=" truncate text-xxs font-semibold  md:text-base">
+                                                         Shoope Pay</h4>
+                                                     <p class="text-xxs md:text-sm">Dicek Otomatis</p>
+                                                     <p class="text-xs md:text-sm mt-1">Rp. 1000</p>
+                                                 </div>
+                                             </div>
+                                             <!-- End Card 1 -->
+                                         </div>
+                                     </div>
+                                     <!-- End Item -->
                                 </div>
+                                <!-- End Item Wrapper -->
                             </div>
                             <!-- END:Choose Payment  -->
 
@@ -673,6 +629,38 @@
     </section>
     <!-- End Form Pembayaran -->
 
+    <!-- Cara Top Up -->
+    <section class="faq">
+        <div class="container mx-auto mt-10">
+            <h2 class="judul-Cara h2 text-center mb-[50px]">Cara Top Up</h2>
+            <!-- Item Wrapper -->
+            <div class="max-w-5xl mx-auto">
+                <!-- Item -->
+                <div class="cara-item px-[30px] pt-7 pb-4 border-b cursor-pointer select-none">
+                    <!-- Title & icon -->
+                    <div class="flex items-center justify-between mb-[10px]">
+                        <h4 class="h4">
+                            Lorem ipsum dolor sit amet ?
+                        </h4>
+                        <div class="icon-btn">
+                            <i class="fa-solid fa-chevron-down text-2xl"></i>
+                        </div>
+                    </div>
+                    <!-- content -->
+                    <div class="cara-content  h-0 overflow-hidden">
+                        <p class="">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aspernatur perferendis ad.
+                            Rerum ad, voluptate facere molestiae qui beatae animi asperiores laboriosam sequi earum
+                            corporis cum, laudantium nisi illo eius.</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- End Cara Top Up -->
 
     <!-- Footer -->
     <footer class="p-4  sm:p-6 mt-48">
@@ -764,10 +752,9 @@
     <!--  -->
     <script src="../js/carouselSwiper.js"></script>
     <script src="../js/accordionFlowbite.js"></script>
-    <script src="../js/anchorLink.js"></script>
     <script src="../js/modal.js"></script>
     <script src="../js/dropdown.js"></script>
-
+    <script src="../js/accordion.js"></script>
 </body>
 
 </html>
