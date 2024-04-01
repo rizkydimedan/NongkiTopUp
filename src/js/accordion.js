@@ -19,22 +19,20 @@
 
 const caraItem = document.querySelectorAll('.content-item');
 
-caraItem.forEach((element) => {
+caraItem.forEach(element => {
     const caraBtn = element.querySelector('.icon-btn');
-   
-    
+  
     element.addEventListener('click', () => {
-       const open = element.classList.toggle('open');
-       
-       if (open){
-        caraBtn.classList.add("rotate-180");
-        caraBtn.classList.add('duration-300');
-       caraBtn.classList.add('transition-all');
-      open.classList.add('duration-300');
-        
-       } else {
-        caraBtn.classList.remove("rotate-180");
-        
-       }
+        const open = element.classList.toggle('open');
+        if (open) {
+            caraBtn.classList.add("rotate-180");
+            caraBtn.classList.add('duration-300');
+            caraBtn.classList.add('transition-all');
+   
+        } else {
+            caraBtn.classList.remove("rotate-180");
+        }
+      
     });
+
 });
