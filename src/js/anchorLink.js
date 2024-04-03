@@ -1,6 +1,6 @@
 // Select all anchor links with href starting with '#'
 const smoothScrollAnchor = document.querySelectorAll("a[href^='#']");
-console.log(smoothScrollAnchor);
+
 
 // Iterate through each anchor link
 for (let index = 0; index < smoothScrollAnchor.length; index++) {

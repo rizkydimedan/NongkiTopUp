@@ -64,10 +64,6 @@ h1,h2,h3,h4,h5,h6 {
 
 }
 
-/* Accordion */
-.content-item.open .content-body{
-    @apply h-full;
-}
 
 
 @media (min-width: 1440px){.swiper-container{
@@ -106,6 +102,9 @@ h1,h2,h3,h4,h5,h6 {
       @apply text-slate-800;
     }
     
+    .navbar-fixed .container-akun{
+        @apply text-slate-800;
+    }
    /* .navbar-fixed .closeBtn {
     @apply backdrop-blur-sm blur-lg fixed inset-0 bg-slate-700 bg-opacity-80;
    } */

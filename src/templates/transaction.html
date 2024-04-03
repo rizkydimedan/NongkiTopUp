@@ -13,14 +13,15 @@
     <!-- Swiper css -->
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" /> -->
+    <script src="//unpkg.com/alpinejs" defer></script>
 
 
 
 </head>
 
-<body class="bg-cyan-500 bg-gradient-to-r from-slate-400 ...">
+<body class="">
     <!-- Start Header -->
-    <header class=" pt-2 top-0 fixed z-40 w-full shadow-lg items-center ">
+    <header class=" pt-2 top-0 fixed z-30 w-full shadow-lg items-center ">
         <div class="container mx-auto md:relative md:flex-row gap-y-4 md:gap-y-0 top-navbar">
             <div class="flex h-[60px] justify-between">
                 <!-- Start Hamburger Menu -->
@@ -100,31 +101,34 @@
                                 class="fa-solid fa-cart-shopping"></i></a>
                     </div>
                     <!-- User -->
-                    <a href="login.html"
-                        class="font-semibold transition-colors duration-300 ease-out hover:text-white hidden md:block text-sm  ml-4 px-4 py-2 rounded ">Masuk</a>
-                    <!-- btn user Mobile -->
-                    <div class=" block md:hidden relative">
-                        <button id="menu-user" type="button"
-                            class="font-medium text-lg md:text-xl hover:text-white hover:bg-slate-600 ml-2 w-10 h-10 items-center flex justify-center rounded-md focus:text-white focus:bg-slate-600"><i
-                                class="fa-solid fa-user"></i></button>
-                        <!-- Dropdown -->
-                        <div id="myDropdown"
-                            class="dropdown-content absolute top-14 right-0  rounded-xl  w-[120px] h-auto  bg-white  items-center py-2 hidden ">
-                            <div class="flex flex-col mx-auto w-full h-full items-center gap-y-2 px-5">
-                                <a href="login.html"
-                                    class="font-semibold transition-colors duration-300 ease-out hover:text-slate-600 text-sm">Masuk</a>
-                                <a href="register.html"
-                                    class="px-4 py-2 text-xs font-bold text-white  transition-all duration-150 bg-cyan-700 rounded shadow outline-none hover:bg-emerald-600 hover:shadow-md focus:outline-none ease ">
-                                    Daftar
+                    <div class="relative" x-data="{ isOpen: false}">
+                        <button @click="isOpen = !isOpen" class="flex items-center">
+                            <img src="http://www.gravatar.com/avatar?d=mm" alt="avatar" class="w-8 h-8 rounded-full">
+                            <i class="fa-solid fa-chevron-down ml-1.5 text-sm"></i>
+                        </button>
+                        <ul x-show="isOpen" @click.away="isOpen = false"
+                            class="absolute font-normal bg-white shadow overflow-hidden rounded w-32 md:w-48 border mt-4 py-1 right-0 z-20 container-akun">
+                            <li>
+                                <a href="#" class="flex items-center px-3 py-3 hover:bg-gray-200">
+                                    <i class="fa-solid fa-circle-user text-base md:text-xl"></i>
+                                    <span class="ml-2">Akun</span>
                                 </a>
-                            </div>
-                        </div>
+                            </li>
+                            <li class="border-b border-gray-400">
+                                <a href="#" class="flex items-center px-3 py-3 hover:bg-gray-200">
+                                    <i class="fa-solid fa-gear text-base md:text-xl"></i>
+                                    <span class="ml-2">Settings</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center px-3 py-3 hover:bg-gray-200">
+                                    <i class="fa-solid fa-arrow-right-from-bracket text-base md:text-xl"></i>
+                                    </svg><span class="ml-2">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                     <!--  -->
-                    <a href="register.html"
-                        class="px-4 py-2 text-sm font-semibold text-white  transition-all duration-150 bg-cyan-700 rounded shadow outline-none active:bg-emerald-600 hover:shadow-md focus:outline-none ease-in-out hidden md:block">
-                        Daftar
-                    </a>
 
                     <!-- End Search, Login -->
                 </div>
@@ -183,8 +187,8 @@
     </nav>
     <!-- End Mobile Nav-->
 
-    <!-- Start Hero Section -->
-    <section class="hero top-0 bg-gray-300 relative pb-5">
+     <!-- Start Hero Section -->
+     <section class="hero top-0 bg-gray-300 relative pb-5">
         <div class="container mx-auto h-full pt-24 md:pt-[70px] md:pb-0 overflow-hidden">
             <!-- Start Text & Img -->
             <div class="flex flex-col md:flex-row items-center justify-between h-full z-10">
@@ -316,251 +320,6 @@
         </div>
     </section>
     <!-- END Hero Section -->
-
-    <!-- Start Clients -->
-    <section class="w-full pt-3 ">
-        <div class="container mx-auto">
-            <div class="flex justify-center items-center px-5 py-4 text-white ">
-                <h2 class="text-lg md:text-xl font-semibold">Supported By</h2>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-x-4">
-                <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4 ">
-                    <img src="/src/images/logo/company-1.png" alt="logo adome"
-                        class="mx-auto w-32 h-auto object-cover object-center" />
-                </div>
-                <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4  ">
-                    <img src="/src/images/logo/company-2.png" alt="logo adome"
-                        class="mx-auto w-32 h-auto object-cover object-center" />
-                </div>
-                <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4">
-                    <img src="/src/images/logo/company-3.png" alt="logo adome"
-                        class="mx-auto w-32 h-auto object-cover object-center" />
-                </div>
-                <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4">
-                    <img src="/src/images/logo/company-4.png" alt="logo adome"
-                        class="mx-auto w-32 h-auto object-cover object-center" />
-                </div>
-                <div class="w-full flex-auto md:w-auto md:flex-initial px-4 md:px-6 my-4">
-                    <img src="/src/images/logo/company-5.png" alt="logo adome"
-                        class="mx-auto w-32 h-auto object-cover object-center" />
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Clients -->
-
-    <!-- Section Rekomendasi Game -->
-    <section class="w-full pt-16 md:pt-20 " id="explore-now">
-        <div class="container mx-auto">
-            <div class="flex justify-start py-4 text-white">
-                <h2 class="h2 text-xl md:text-3xl font-semibold mb-5 drop-shadow-md"><i
-                        class="fa-solid fa-heart mr-3"></i>Rekomendasi</h2>
-            </div>
-            <!-- Card Games -->
-            <div class="grid text-center grid-cols-2 md:grid-cols-3 gap-3 justify-center ">
-                <!-- Start Card 1 -->
-                <a href="order.html" tabindex="0">
-                    <div
-                        class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
-                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                        <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                            class="relative aspect-square h-14 w-14 rounded-lg !object-cover !object-center md:h-20 md:w-20 md:rounded-xl left-0">
-                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2">
-                            <h4 class=" truncate text-xxs font-semibold  md:text-base">
-                                Valorant</h4>
-                            <p class="text-xxs md:text-sm">Riot Games</p>
-                        </div>
-
-                    </div>
-                </a>
-                <!-- End Card 1 -->
-                <!-- Start Card 1 -->
-                <a href="order.html" tabindex="0">
-                    <div
-                        class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
-                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                        <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                            class="relative aspect-square h-14 w-14 rounded-lg !object-cover !object-center md:h-20 md:w-20 md:rounded-xl left-0">
-                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2">
-                            <h4 class=" truncate text-xxs font-semibold  md:text-base">
-                                Valorant</h4>
-                            <p class="text-xxs md:text-sm">Riot Games</p>
-                        </div>
-
-                    </div>
-                </a>
-                <!-- End Card 1 -->
-                <!-- Start Card 1 -->
-                <a href="order.html" tabindex="0">
-                    <div
-                        class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
-                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                        <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                            class="relative aspect-square h-14 w-14 rounded-lg !object-cover !object-center md:h-20 md:w-20 md:rounded-xl left-0">
-                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2">
-                            <h4 class=" truncate text-xxs font-semibold  md:text-base">
-                                Valorant</h4>
-                            <p class="text-xxs md:text-sm">Riot Games</p>
-                        </div>
-
-                    </div>
-                </a>
-                <!-- End Card 1 -->
-                <!-- Start Card 1 -->
-                <a href="order.html" tabindex="0">
-                    <div
-                        class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
-                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                        <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                            class="relative aspect-square h-14 w-14 rounded-lg !object-cover !object-center md:h-20 md:w-20 md:rounded-xl left-0">
-                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2">
-                            <h4 class=" truncate text-xxs font-semibold  md:text-base">
-                                Valorant</h4>
-                            <p class="text-xxs md:text-sm">Riot Games</p>
-                        </div>
-
-                    </div>
-                </a>
-                <!-- End Card 1 -->
-                <!-- Start Card 1 -->
-                <a href="order.html" tabindex="0">
-                    <div
-                        class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
-                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                        <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                            class="relative aspect-square h-14 w-14 rounded-lg !object-cover !object-center md:h-20 md:w-20 md:rounded-xl left-0">
-                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2">
-                            <h4 class=" truncate text-xxs font-semibold  md:text-base">
-                                Valorant</h4>
-                            <p class="text-xxs md:text-sm">Riot Games</p>
-                        </div>
-
-                    </div>
-                </a>
-                <!-- End Card 1 -->
-                <!-- Start Card 1 -->
-                <a href="order.html" tabindex="0">
-                    <div
-                        class="w-auto flex-auto md:flex-initial px-4 md:px-4 items-center relative flex rounded-xl duration-300 ease-in-out hover:shadow-2xl hover:ring-2 hover:ring-primary-500 hover:ring-offset-2 hover:ring-offset-white md:gap-x-3 md:rounded-2x md:p-3 border-2 min-h-[100px] z-20">
-                        <div class="absolute rounded-xl inset-0 bg-gradient-to-r from-black/70 ..."></div>
-                        <img src="../images/logo/valorant.jpeg" alt="Game Logo"
-                            class="relative aspect-square h-14 w-14 rounded-lg !object-cover !object-center md:h-20 md:w-20 md:rounded-xl left-0">
-                        <div class="relative flex w-full flex-col text-white text-start justify-start pl-2">
-                            <h4 class=" truncate text-xxs font-semibold  md:text-base">
-                                Valorant</h4>
-                            <p class="text-xxs md:text-sm">Riot Games</p>
-                        </div>
-
-                    </div>
-                </a>
-                <!-- End Card 1 -->
-
-
-            </div>
-            <!-- Card Games -->
-        </div>
-    </section>
-    <!-- Section Rekomendasi Game -->
-
-    <!-- Section Game Terlaris -->
-    <section class="w-full pt-16 md:pt-20">
-        <div class="container mx-auto">
-            <div class="flex justify-start py-4 text-white mb-4">
-                <h2 class="h2 text-lg md:text-3xl font-semibold"><i class="fa-solid fa-fire mr-3"></i>Game Terlaris</h2>
-            </div>
-            <!-- Card Games -->
-
-            <div class="grid text-center grid-cols-2 md:grid-cols-4 gap-5 justify-between">
-                <!-- card 1 -->
-                <a href="order.html" tabindex="0">
-                    <div
-                        class="relative grid grid-cols-1 bg-clip-border  text-gray-700 shadow-md w-auto min-h-[240px] md:h-[350px] items-center content-end border-4 border-white rounded-2xl">
-                        <img src="../images/content/apex-legends.jpg" alt=""
-                            class="absolute inset-0 h-full w-full object-cover object-center transition-all duration-300 ease-in-out hover:scale-105 rounded-xl" />
-                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-black/70 ... "></div>
-                        <div class="p-6 relative">
-                            <div class="-mb-7 md:-mb-5">
-                                <h4
-                                    class="block text-md font-semibold bg-green-700 rounded-xl hover:bg-orange-400 mx-2 py-1 md:py-2 text-white ">
-                                    Apex Legends
-                                </h4>
-                                <p class="block text-md text-white my-2 ">EA</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </a>
-                <!-- card 1 -->
-                <!-- card 1 -->
-                <a href="order.html" tabindex="0">
-                    <div
-                        class="relative grid grid-cols-1 bg-clip-border  text-gray-700 shadow-md w-auto min-h-[240px] md:h-[350px] items-center content-end border-4 border-white rounded-2xl">
-                        <img src="../images/content/apex-legends.jpg" alt=""
-                            class="absolute inset-0 h-full w-full object-cover object-center transition-all duration-300 ease-in-out hover:scale-105 rounded-xl" />
-                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-black/70 ... "></div>
-                        <div class="p-6 relative">
-                            <div class="-mb-7 md:-mb-5">
-                                <h4
-                                    class="block text-md font-semibold bg-green-700 rounded-xl hover:bg-orange-400 mx-2 py-1 md:py-2 text-white ">
-                                    Apex Legends
-                                </h4>
-                                <p class="block text-md text-white my-2 ">EA</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </a>
-                <!-- card 1 -->
-                <!-- card 1 -->
-                <a href="order.html" tabindex="0">
-                    <div
-                        class="relative grid grid-cols-1 bg-clip-border  text-gray-700 shadow-md w-auto min-h-[240px] md:h-[350px] items-center content-end border-4 border-white rounded-2xl">
-                        <img src="../images/content/apex-legends.jpg" alt=""
-                            class="absolute inset-0 h-full w-full object-cover object-center transition-all duration-300 ease-in-out hover:scale-105 rounded-xl" />
-                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-black/70 ... "></div>
-                        <div class="p-6 relative">
-                            <div class="-mb-7 md:-mb-5">
-                                <h4
-                                    class="block text-md font-semibold bg-green-700 rounded-xl hover:bg-orange-400 mx-2 py-1 md:py-2 text-white ">
-                                    Apex Legends
-                                </h4>
-                                <p class="block text-md text-white my-2 ">EA</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </a>
-                <!-- card 1 -->
-                <!-- card 1 -->
-                <a href="order.html" tabindex="0">
-                    <div
-                        class="relative grid grid-cols-1 bg-clip-border  text-gray-700 shadow-md w-auto min-h-[240px] md:h-[350px] items-center content-end border-4 border-white rounded-2xl">
-                        <img src="../images/content/apex-legends.jpg" alt=""
-                            class="absolute inset-0 h-full w-full object-cover object-center transition-all duration-300 ease-in-out hover:scale-105 rounded-xl" />
-                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-black/70 ... "></div>
-                        <div class="p-6 relative">
-                            <div class="-mb-7 md:-mb-5">
-                                <h4
-                                    class="block text-md font-semibold bg-green-700 rounded-xl hover:bg-orange-400 mx-2 py-1 md:py-2 text-white ">
-                                    Apex Legends
-                                </h4>
-                                <p class="block text-md text-white my-2 ">EA</p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </a>
-                <!-- card 1 -->
-            </div>
-            <!-- Card Games -->
-        </div>
-    </section>
-    <!-- Section Game Terlaris -->
 
     <!-- Footer -->
     <footer class="p-4  sm:p-6 mt-20">
