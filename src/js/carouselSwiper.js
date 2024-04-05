@@ -14,6 +14,22 @@ var swiper = new Swiper('.swiper-container', {
     },
 });
 
+// Carousel Berita index.html
+var swiper = new Swiper('.swiper-article',{
+    slidesPerView: 4,
+    grabCursor: true,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
+
 // Carousel games.html
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 'auto',

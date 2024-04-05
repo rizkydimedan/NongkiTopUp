@@ -14,3 +14,7 @@ function  showSearch() {
 
   
  
+// succes.html
+const btnModal = document.querySelector('.tombol-modal');
+const bgModalSucces = document.querySelector('.bg-modal-succes');
+
