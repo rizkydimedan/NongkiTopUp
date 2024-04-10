@@ -346,7 +346,8 @@
         </div>
 
         <!-- Kertas Bon-->
-        <div class=" inset-0 fixed z-50 min-h-full w-full bg-black bg-opacity-80 justify-center items-center hidden bg-modal-succes">
+        <div
+            class=" inset-0 fixed z-50 min-h-full w-full bg-black bg-opacity-80 justify-center items-center flex bg-modal-succes">
             <div class="w-1/3 h-auto bg-slate-200 rounded-xl px-3 py-5">
                 <div class="w-full h-full flex justify-between text-lg font-semibold">
                     <h3>Detail Link Pembayaran</h3>
@@ -404,47 +405,50 @@
 
                 <div class="pt-7">
                     <h5>Time Line</h5>
-                    <div class="mt-7">
-                        <ul class="gap-y-4 flex flex-col">
-                            <li class="text-xs flex flex-row">
-                                <i class="fa-solid fa-check mr-3 text-xs text-sky-500"></i>
-                                <div class="flex flex-col">
-                                <p class="text-slate-500 ">Create Payment Link</p>
-                                <p>03 April, 2024</p>
+                    <!-- Created By Joker Banny -->
+                    <div class="flex w-full items-center px-6 text-sm py-2">
+                        <div class="space-y-6 border-l-2 border-dashed border-slate-600">
+                            <div class="relative w-full">
+                                <i class="fa-solid fa-circle-check absolute -top-0.5 z-10 -ml-3 h-6 w-6 rounded-full bg-white" style="color: #3b82f6;" ></i>
+                                <div class="ml-6">
+                                    <h4 class="font-bold text-blue-500">Created Payment Link</h4>
+                                    <p class="mt-2 max-w-screen-sm text-sm text-gray-500">03 April, 2024 02.40 PM
+                                    </p>
+                                </div>
                             </div>
-                            </li>
-                            <li class="text-xs flex flex-row">
-                                <i class="fa-solid fa-check mr-3 text-xs text-sky-500"></i>
-                                <div class="flex flex-col">
-                                <p class="text-slate-500 ">Create Payment Link</p>
-                                <p>03 April, 2024</p>
+                            <div class="relative w-full">
+                                <i class="fa-solid fa-circle-check absolute -top-0.5 z-10 -ml-3 h-6 w-6 rounded-full bg-white" style="color: #3b82f6;" ></i>
+                                <div class="ml-6">
+                                    <h4 class="font-bold text-blue-500">Awaiting Paiment</h4>
+                                    <p class="mt-2 max-w-screen-sm text-sm text-gray-500">Waiting for a payment</p>
+                                </div>
                             </div>
-                            </li>
-                            <li class="text-xs flex flex-row">
-                                <i class="fa-solid fa-check mr-3 text-xs text-sky-500"></i>
-                                <div class="flex flex-col">
-                                <p class="text-slate-500 ">Create Payment Link</p>
-                                <p>03 April, 2024</p>
+                            <div class="relative w-full">
+                                <i class="fa-solid fa-circle-check absolute -top-0.5 z-10 -ml-3 h-6 w-6 rounded-full bg-white" style="color: #3b82f6;" ></i>
+                                <div class="ml-6">
+                                    <h4 class="font-bold text-blue-500">Payment Complete</h4>
+                                    <p class="mt-2 max-w-screen-sm text-sm text-gray-500">You Have received a payment of
+                                    </p>
+                                    <span class="mt-1 block text-sm font-semibold text-blue-500">Rp. 1000</span>
+                                </div>
                             </div>
-                            </li>
-                          </ul>
-                         
+                        </div>
+                    </div>
+                </div>
+                <!-- button -->
+                <div class="w-full flex justify-end items-end pt-12">
+                    <div class="flex text-sm gap-x-2">
+                        <button type="button"
+                            class="h-8 px-2 border-b border-slate-700 hover:border-sky-500 hover:text-sky-500">Cancel
+                            Request</button>
+                        <button type="button"
+                            class="h-8 px-2 rounded-lg bg-sky-500 hover:bg-sky-700 hover:text-sky-400">Request this
+                            again</button>
+                    </div>
                 </div>
             </div>
-
-            <div class="w-full flex justify-end items-end pt-12">
-                <div class="flex text-sm gap-x-2">
-                    <button type="button" class="h-8 px-2 border-b border-slate-700 hover:border-sky-500 hover:text-sky-500">Cancel Request</button>
-                    <button type="button" class="h-8 px-2 rounded-lg bg-sky-500 hover:bg-sky-700 hover:text-sky-400">Request this again</button>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- Riwayat Transaksi -->
-
-
-
-
 
     <!-- Footer -->
     <footer class="p-4  sm:p-6 mt-20">
@@ -516,10 +520,6 @@
         </div>
     </footer>
     <!-- Footer -->
-
-
-
-
 
     <!-- Material tailwind -->
     <!-- <script src="node_modules/@material-tailwind/html@latest/scripts/ripple.js"></script> -->
