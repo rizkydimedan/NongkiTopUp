@@ -189,264 +189,289 @@
 
     <!-- Riwayat Transaksi -->
     <section class="mt-32 ">
+        <div x-data="{ modelOpen: false }">
+            <div class="mx-auto mt-8 max-w-screen-lg px-2 z-10">
+                <div class="sm:flex sm:items-center sm:justify-between flex-col sm:flex-row">
+                    <p class="flex-1 text-base font-bold text-gray-900">Riwayat Transaksi</p>
 
-        <div class="mx-auto mt-8 max-w-screen-lg px-2 z-10">
-            <div class="sm:flex sm:items-center sm:justify-between flex-col sm:flex-row">
-                <p class="flex-1 text-base font-bold text-gray-900">Riwayat Transaksi</p>
+                    <div class="mt-4 sm:mt-0">
+                        <div class="flex items-center justify-start sm:justify-end">
+                            <div class="flex items-center">
+                                <label for="" class="mr-2 flex-shrink-0 text-sm font-medium text-gray-900"> sort by:
+                                </label>
+                                <select name=""
+                                    class="sm: mr-4 block w-full whitespace-pre rounded-lg border p-1 pr-10 text-base outline-none focus:shadow sm:text-sm">
+                                    <option class="whitespace-no-wrap text-sm">Terkini</option>
+                                </select>
+                            </div>
 
-                <div class="mt-4 sm:mt-0">
-                    <div class="flex items-center justify-start sm:justify-end">
-                        <div class="flex items-center">
-                            <label for="" class="mr-2 flex-shrink-0 text-sm font-medium text-gray-900"> sort by:
-                            </label>
-                            <select name=""
-                                class="sm: mr-4 block w-full whitespace-pre rounded-lg border p-1 pr-10 text-base outline-none focus:shadow sm:text-sm">
-                                <option class="whitespace-no-wrap text-sm">Terkini</option>
-                            </select>
+                            <button type="button"
+                                class="inline-flex cursor-pointer items-center rounded-lg border border-gray-400 bg-white py-2 px-3 text-center text-sm font-medium text-gray-800 shadow hover:bg-gray-100 focus:shadow">
+                                <i class="fa-solid fa-file-arrow-down mr-2"></i>
+                                Export to Pdf
+                            </button>
                         </div>
-
-                        <button type="button"
-                            class="inline-flex cursor-pointer items-center rounded-lg border border-gray-400 bg-white py-2 px-3 text-center text-sm font-medium text-gray-800 shadow hover:bg-gray-100 focus:shadow">
-                            <i class="fa-solid fa-file-arrow-down mr-2"></i>
-                            Export to Pdf
-                        </button>
                     </div>
+                </div>
+
+                <div class="mt-6 overflow-hidden rounded-xl border border-black shadow-xl drop-shadow-lg bg-white">
+                    <table class="min-w-full border-separate border-spacing-y-2 border-spacing-x-2">
+                        <thead class="hidden border-b lg:table-header-group">
+                            <tr class="">
+                                <td width="50%"
+                                    class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">
+                                    Faktur</td>
+
+                                <td class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Tanggal
+                                </td>
+
+                                <td class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Jumlah</td>
+
+                                <td class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Status</td>
+                            </tr>
+                        </thead>
+
+                        <tbody class="lg:border-gray-300">
+                            <!--  -->
+                            <tr class="">
+                                <td width="50%" class="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
+                                    Valorant - Diamond 200
+                                    <div class="mt-1 lg:hidden">
+                                        <p class="font-normal text-gray-500">03 April, 2024</p>
+                                    </div>
+                                </td>
+
+                                <td
+                                    class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
+                                    03 April, 2024</td>
+
+                                <td class="whitespace-no-wrap py-4 px-6 text-right text-sm text-gray-600 lg:text-left">
+                                    Rp. 100.000
+                                    <button @click="modelOpen =!modelOpen"
+                                        class="flex mt-1 ml-auto w-fit items-center rounded-full bg-blue-600 py-2 px-3 text-left text-xs font-medium text-white lg:hidden">
+                                        Complete</button>
+                                </td>
+
+                                <td
+                                    class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
+                                    <button @click="modelOpen =!modelOpen"
+                                        class="inline-flex items-center rounded-full bg-blue-600 py-2 px-3 text-xs text-white">
+                                        Complete</button>
+                                </td>
+                            </tr>
+                            <!--  -->
+                            <!--  -->
+                            <tr class="">
+                                <td width="50%" class="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
+                                    Mobile Legend - Diamond 300
+                                    <div class="mt-1 lg:hidden">
+                                        <p class="font-normal text-gray-500">09 Januari, 2024</p>
+                                    </div>
+                                </td>
+
+                                <td
+                                    class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
+                                    09 Januari, 2024</td>
+
+                                <td class="whitespace-no-wrap py-4 px-6 text-right text-sm text-gray-600 lg:text-left">
+                                    Rp. 200.000
+                                    <div
+                                        class="flex mt-1 ml-auto w-fit items-center rounded-full bg-red-200 py-1 px-2 text-left font-medium text-red-500 lg:hidden">
+                                        Canceled</div>
+                                </td>
+
+                                <td
+                                    class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
+                                    <div
+                                        class="inline-flex items-center rounded-full bg-red-200 py-1 px-2 text-red-500">
+                                        Canceled</div>
+                                </td>
+                            </tr>
+                            <!--  -->
+                            <!--  -->
+                            <tr class="">
+                                <td width="50%" class="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
+                                    Valorant - Diamond 200
+                                    <div class="mt-1 lg:hidden">
+                                        <p class="font-normal text-gray-500">03 April, 2024</p>
+                                    </div>
+                                </td>
+
+                                <td
+                                    class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
+                                    03 April, 2024</td>
+
+                                <td class="whitespace-no-wrap py-4 px-6 text-right text-sm text-gray-600 lg:text-left">
+                                    Rp. 100.000
+                                    <div
+                                        class="flex mt-1 ml-auto w-fit items-center rounded-full bg-blue-600 py-2 px-3 text-left text-xs font-medium text-white lg:hidden">
+                                        Complete</div>
+                                </td>
+
+                                <td
+                                    class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
+                                    <div
+                                        class="inline-flex items-center rounded-full bg-blue-600 py-2 px-3 text-xs text-white">
+                                        Complete</div>
+                                </td>
+                            </tr>
+                            <!--  -->
+                            <!--  -->
+                            <tr class="">
+                                <td width="50%" class="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
+                                    Mobile Legend - Diamond 300
+                                    <div class="mt-1 lg:hidden">
+                                        <p class="font-normal text-gray-500">09 Januari, 2024</p>
+                                    </div>
+                                </td>
+
+                                <td
+                                    class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
+                                    09 Januari, 2024</td>
+
+                                <td class="whitespace-no-wrap py-4 px-6 text-right text-sm text-gray-600 lg:text-left">
+                                    Rp. 200.000
+                                    <div
+                                        class="flex mt-1 ml-auto w-fit items-center rounded-full bg-red-200 py-1 px-2 text-left font-medium text-red-500 lg:hidden">
+                                        Canceled</div>
+                                </td>
+
+                                <td
+                                    class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
+                                    <div
+                                        class="inline-flex items-center rounded-full bg-red-200 py-1 px-2 text-red-500">
+                                        Canceled</div>
+                                </td>
+                            </tr>
+                            <!--  -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-            <div class="mt-6 overflow-hidden rounded-xl border border-black shadow-xl drop-shadow-lg bg-white">
-                <table class="min-w-full border-separate border-spacing-y-2 border-spacing-x-2">
-                    <thead class="hidden border-b lg:table-header-group">
-                        <tr class="">
-                            <td width="50%" class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">
-                                Faktur</td>
+            <!-- Kertas Bon-->
+            <div x-show="modelOpen"
+                class="inset-0 fixed z-50 min-h-full overflow-y-auto w-full  bg-opacity-80 justify-center items-center flex " >
+                <div x-cloak @click="modelOpen = false" x-show="modelOpen" 
+                x-transition:enter="transition ease-out duration-300 transform"
+                x-transition:enter-start="opacity-0" 
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="transition ease-in duration-200 transform"
+                x-transition:leave-start="opacity-100" 
+                x-transition:leave-end="opacity-0"
+                class="fixed inset-0 transition-opacity bg-gray-900 bg-opacity-80"
+            > </div>
+                    <div class="w-1/3 h-auto bg-slate-200 rounded-xl px-3 py-5 pt-2 pb-2 z-10">
+                        <div class="w-full h-full flex justify-between text-lg font-semibold">
+                            <h3>Detail Link Pembayaran</h3>
+                            <button @click="modelOpen = false">
+                                <i class="fa-regular fa-circle-xmark"></i>
+                            </button>
+                        </div>
 
-                            <td class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Tanggal</td>
+                        <div class="text-start flex flex-row mt-7 h-20 items-center">
+                            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-slate-400">
+                                <i class="fa-solid fa-file-invoice w-6 h-6"></i>
+                            </div>
 
-                            <td class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Jumlah</td>
+                            <div class="ml-2 text-sm">
+                                <p>Amount</p>
+                                <h5 class="font-semibold text-lg">Rp. 1000</h5>
+                            </div>
+                        </div>
 
-                            <td class="whitespace-normal py-4 text-sm font-medium text-gray-500 sm:px-6">Status</td>
-                        </tr>
-                    </thead>
+                        <div
+                            class="relative flex h-8 w-[75%] items-center px-2 gap-2 border border-slate-600 rounded-md justify-between bg-gray-200 mb-2">
+                            <label class=" w-full text-xs h-full mx-auto flex items-center">
+                                https://www.facebook.com/?locale=id_ID
+                            </label>
+                            <button
+                                class="h-6 flex top-1 z-10 select-none rounded bg-transparent py-2 px-4 text-center items-center text-xs font-semibold text-sky-600 hover:text-sky-800 transition-all"
+                                type="button">
+                                Copy <i class="fa-regular fa-copy ml-2"></i>
+                            </button>
+                        </div>
 
-                    <tbody class="lg:border-gray-300">
-                        <!--  -->
-                        <tr class="">
-                            <td width="50%" class="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
-                                Valorant - Diamond 200
-                                <div class="mt-1 lg:hidden">
-                                    <p class="font-normal text-gray-500">03 April, 2024</p>
+                        <hr class=" border border-slate-400 mx-auto " />
+
+                        <div class="w-full relative flex flex-col text-sm pt-3">
+                            <h5 class="font-semibold">Transaksi Link Pembayaran</h5>
+                            <ul class="flex flex-col gap-y-2 mt-3 items-center ">
+                                <li class=" flex flex-row justify-between w-5/6">Status
+                                    <span
+                                        class="px-2 py-1 leading-none font-semibold inline-block text-xs rounded-full bg-green-100 text-green-800">Paid</span>
+                                </li>
+                                <li class=" flex flex-row justify-between w-5/6">Create On
+                                    <span class="px-2 py-1 leading-none inline-block text-xs">03 April, 2024</span>
+                                </li>
+                                <li class=" flex flex-row justify-between w-5/6">Expired On
+                                    <span class="px-2 py-1 leading-none inline-block text-xs">03 April, 2024</span>
+                                </li>
+                                <li class=" flex flex-row justify-between w-5/6">Reference
+                                    <span class="px-2 py-1 leading-none inline-block text-xs">097478</span>
+                                </li>
+                                <li class=" flex flex-row justify-between w-5/6">Note
+                                    <span class="px-2 py-1 leading-none inline-block text-xs">Halo Sayang</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <hr class=" border border-slate-400 mx-auto " />
+
+                        <div class="pt-7">
+                            <h5>Time Line</h5>
+                            <!-- Created By Joker Banny -->
+                            <div class="flex w-full items-center px-6 text-sm py-2">
+                                <div class="space-y-6 border-l-2 border-dashed border-slate-600">
+                                    <div class="relative w-full">
+                                        <i class="fa-solid fa-circle-check absolute -top-0.5 z-10 -ml-3 h-6 w-6 rounded-full bg-white"
+                                            style="color: #3b82f6;"></i>
+                                        <div class="ml-6">
+                                            <h4 class="font-bold text-blue-500">Created Payment Link</h4>
+                                            <p class="mt-2 max-w-screen-sm text-sm text-gray-500">03 April, 2024 02.40
+                                                PM
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="relative w-full">
+                                        <i class="fa-solid fa-circle-check absolute -top-0.5 z-10 -ml-3 h-6 w-6 rounded-full bg-white"
+                                            style="color: #3b82f6;"></i>
+                                        <div class="ml-6">
+                                            <h4 class="font-bold text-blue-500">Awaiting Paiment</h4>
+                                            <p class="mt-2 max-w-screen-sm text-sm text-gray-500">Waiting for a payment
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="relative w-full">
+                                        <i class="fa-solid fa-circle-check absolute -top-0.5 z-10 -ml-3 h-6 w-6 rounded-full bg-white"
+                                            style="color: #3b82f6;"></i>
+                                        <div class="ml-6">
+                                            <h4 class="font-bold text-blue-500">Payment Complete</h4>
+                                            <p class="mt-2 max-w-screen-sm text-sm text-gray-500">You Have received a
+                                                payment of
+                                            </p>
+                                            <span class="mt-1 block text-sm font-semibold text-blue-500">Rp. 1000</span>
+                                        </div>
+                                    </div>
                                 </div>
-                            </td>
-
-                            <td
-                                class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
-                                03 April, 2024</td>
-
-                            <td class="whitespace-no-wrap py-4 px-6 text-right text-sm text-gray-600 lg:text-left">
-                                Rp. 100.000
-                                <button
-                                    class="flex mt-1 ml-auto w-fit items-center rounded-full bg-blue-600 py-2 px-3 text-left text-xs font-medium text-white lg:hidden">
-                                    Complete</button>
-                            </td>
-
-                            <td
-                                class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
-                                <button
-                                    class="inline-flex items-center rounded-full bg-blue-600 py-2 px-3 text-xs text-white">
-                                    Complete</button>
-                            </td>
-                        </tr>
-                        <!--  -->
-                        <!--  -->
-                        <tr class="">
-                            <td width="50%" class="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
-                                Mobile Legend - Diamond 300
-                                <div class="mt-1 lg:hidden">
-                                    <p class="font-normal text-gray-500">09 Januari, 2024</p>
-                                </div>
-                            </td>
-
-                            <td
-                                class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
-                                09 Januari, 2024</td>
-
-                            <td class="whitespace-no-wrap py-4 px-6 text-right text-sm text-gray-600 lg:text-left">
-                                Rp. 200.000
-                                <div
-                                    class="flex mt-1 ml-auto w-fit items-center rounded-full bg-red-200 py-1 px-2 text-left font-medium text-red-500 lg:hidden">
-                                    Canceled</div>
-                            </td>
-
-                            <td
-                                class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
-                                <div class="inline-flex items-center rounded-full bg-red-200 py-1 px-2 text-red-500">
-                                    Canceled</div>
-                            </td>
-                        </tr>
-                        <!--  -->
-                        <!--  -->
-                        <tr class="">
-                            <td width="50%" class="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
-                                Valorant - Diamond 200
-                                <div class="mt-1 lg:hidden">
-                                    <p class="font-normal text-gray-500">03 April, 2024</p>
-                                </div>
-                            </td>
-
-                            <td
-                                class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
-                                03 April, 2024</td>
-
-                            <td class="whitespace-no-wrap py-4 px-6 text-right text-sm text-gray-600 lg:text-left">
-                                Rp. 100.000
-                                <div
-                                    class="flex mt-1 ml-auto w-fit items-center rounded-full bg-blue-600 py-2 px-3 text-left text-xs font-medium text-white lg:hidden">
-                                    Complete</div>
-                            </td>
-
-                            <td
-                                class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
-                                <div
-                                    class="inline-flex items-center rounded-full bg-blue-600 py-2 px-3 text-xs text-white">
-                                    Complete</div>
-                            </td>
-                        </tr>
-                        <!--  -->
-                        <!--  -->
-                        <tr class="">
-                            <td width="50%" class="whitespace-no-wrap py-4 text-sm font-bold text-gray-900 sm:px-6">
-                                Mobile Legend - Diamond 300
-                                <div class="mt-1 lg:hidden">
-                                    <p class="font-normal text-gray-500">09 Januari, 2024</p>
-                                </div>
-                            </td>
-
-                            <td
-                                class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
-                                09 Januari, 2024</td>
-
-                            <td class="whitespace-no-wrap py-4 px-6 text-right text-sm text-gray-600 lg:text-left">
-                                Rp. 200.000
-                                <div
-                                    class="flex mt-1 ml-auto w-fit items-center rounded-full bg-red-200 py-1 px-2 text-left font-medium text-red-500 lg:hidden">
-                                    Canceled</div>
-                            </td>
-
-                            <td
-                                class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-6 lg:table-cell">
-                                <div class="inline-flex items-center rounded-full bg-red-200 py-1 px-2 text-red-500">
-                                    Canceled</div>
-                            </td>
-                        </tr>
-                        <!--  -->
-                    </tbody>
-                </table>
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="w-full flex justify-end items-end pt-12">
+                            <div class="flex text-sm gap-x-2">
+                                <button type="button"
+                                    class="h-8 px-2 border-b border-slate-700 hover:border-sky-500 hover:text-sky-500">Cancel
+                                    Request</button>
+                                <button type="button"
+                                    class="h-8 px-2 rounded-lg bg-sky-500 hover:bg-sky-700 hover:text-sky-400">Request
+                                    this
+                                    again</button>
+                            </div>
+                        </div>
+                    </div>
+               
             </div>
         </div>
-
-        <!-- Kertas Bon-->
-        <div
-            class=" inset-0 fixed z-50 min-h-full w-full bg-black bg-opacity-80 justify-center items-center flex bg-modal-succes">
-            <div class="w-1/3 h-auto bg-slate-200 rounded-xl px-3 py-5">
-                <div class="w-full h-full flex justify-between text-lg font-semibold">
-                    <h3>Detail Link Pembayaran</h3>
-                    <i class="fa-solid fa-xmark cursor-pointer tombol-modal"></i>
-                </div>
-
-                <div class="text-start flex flex-row mt-7 h-20 items-center">
-                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-slate-400">
-                        <i class="fa-solid fa-file-invoice w-6 h-6"></i>
-                    </div>
-
-                    <div class="ml-2 text-sm ">
-                        <p>Amount</p>
-                        <h5 class="font-semibold text-lg">Rp. 1000</h5>
-                    </div>
-                </div>
-
-                <div
-                    class="relative flex h-8 w-[75%] items-center px-2 gap-2 border border-slate-600 rounded-md justify-between bg-gray-200 mb-2">
-                    <label class=" w-full text-xs h-full mx-auto flex items-center">
-                        https://www.facebook.com/?locale=id_ID
-                    </label>
-                    <button
-                        class="h-6 flex top-1 z-10 select-none rounded bg-transparent py-2 px-4 text-center items-center text-xs font-semibold text-sky-600 hover:text-sky-800 transition-all"
-                        type="button">
-                        Copy <i class="fa-regular fa-copy ml-2"></i>
-                    </button>
-                </div>
-
-                <hr class=" border border-slate-400 mx-auto " />
-
-                <div class="w-full relative flex flex-col text-sm pt-3">
-                    <h5 class="font-semibold">Transaksi Link Pembayaran</h5>
-                    <ul class="flex flex-col gap-y-2 mt-3 items-center ">
-                        <li class=" flex flex-row justify-between w-5/6">Status
-                            <span
-                                class="px-2 py-1 leading-none font-semibold inline-block text-xs rounded-full bg-green-100 text-green-800">Paid</span>
-                        </li>
-                        <li class=" flex flex-row justify-between w-5/6">Create On
-                            <span class="px-2 py-1 leading-none inline-block text-xs">03 April, 2024</span>
-                        </li>
-                        <li class=" flex flex-row justify-between w-5/6">Expired On
-                            <span class="px-2 py-1 leading-none inline-block text-xs">03 April, 2024</span>
-                        </li>
-                        <li class=" flex flex-row justify-between w-5/6">Reference
-                            <span class="px-2 py-1 leading-none inline-block text-xs">097478</span>
-                        </li>
-                        <li class=" flex flex-row justify-between w-5/6">Note
-                            <span class="px-2 py-1 leading-none inline-block text-xs">Halo Sayang</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <hr class=" border border-slate-400 mx-auto " />
-
-                <div class="pt-7">
-                    <h5>Time Line</h5>
-                    <!-- Created By Joker Banny -->
-                    <div class="flex w-full items-center px-6 text-sm py-2">
-                        <div class="space-y-6 border-l-2 border-dashed border-slate-600">
-                            <div class="relative w-full">
-                                <i class="fa-solid fa-circle-check absolute -top-0.5 z-10 -ml-3 h-6 w-6 rounded-full bg-white" style="color: #3b82f6;" ></i>
-                                <div class="ml-6">
-                                    <h4 class="font-bold text-blue-500">Created Payment Link</h4>
-                                    <p class="mt-2 max-w-screen-sm text-sm text-gray-500">03 April, 2024 02.40 PM
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="relative w-full">
-                                <i class="fa-solid fa-circle-check absolute -top-0.5 z-10 -ml-3 h-6 w-6 rounded-full bg-white" style="color: #3b82f6;" ></i>
-                                <div class="ml-6">
-                                    <h4 class="font-bold text-blue-500">Awaiting Paiment</h4>
-                                    <p class="mt-2 max-w-screen-sm text-sm text-gray-500">Waiting for a payment</p>
-                                </div>
-                            </div>
-                            <div class="relative w-full">
-                                <i class="fa-solid fa-circle-check absolute -top-0.5 z-10 -ml-3 h-6 w-6 rounded-full bg-white" style="color: #3b82f6;" ></i>
-                                <div class="ml-6">
-                                    <h4 class="font-bold text-blue-500">Payment Complete</h4>
-                                    <p class="mt-2 max-w-screen-sm text-sm text-gray-500">You Have received a payment of
-                                    </p>
-                                    <span class="mt-1 block text-sm font-semibold text-blue-500">Rp. 1000</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- button -->
-                <div class="w-full flex justify-end items-end pt-12">
-                    <div class="flex text-sm gap-x-2">
-                        <button type="button"
-                            class="h-8 px-2 border-b border-slate-700 hover:border-sky-500 hover:text-sky-500">Cancel
-                            Request</button>
-                        <button type="button"
-                            class="h-8 px-2 rounded-lg bg-sky-500 hover:bg-sky-700 hover:text-sky-400">Request this
-                            again</button>
-                    </div>
-                </div>
-            </div>
     </section>
     <!-- Riwayat Transaksi -->
 

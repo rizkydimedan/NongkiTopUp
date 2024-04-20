@@ -33,7 +33,6 @@ const closeFilter = document.querySelector('#close-btn-filter');
 const filterSwap = '-left-full';
 function toggleFilter(){
    filter.classList.toggle(filterSwap);
-    
 }
 btnFilter.addEventListener('click', toggleFilter);
 closeFilter.addEventListener('click', toggleFilter);
