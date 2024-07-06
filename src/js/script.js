@@ -1,6 +1,6 @@
-// Navbar/Header
+// Navbar
 window.onscroll = function () {
-    const header = document.querySelector('header');
+    const header = document.querySelector('nav');
     const fixedNav = header.offsetTop;
     if (window.pageYOffset > fixedNav) {
         header.classList.add("navbar-fixed");
